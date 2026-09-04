@@ -66,7 +66,9 @@ The patient stays central, and can understand what is happening, who is involved
 
 Fragmented building work across real locations: buildings, apartments, offices, rooms, shared areas, assets, tenants, administrators, internal teams, and external service providers.
 
-A request can be opened from the place where the problem exists — home, office, building area, QR point, asset, room, or service zone — then routed, assigned, scheduled, executed with evidence, approved, and closed with cost and completion history attached.
+A request can be opened from the place where the problem exists — home, office, building area, QR point, asset, room, or service zone — then routed, assigned, scheduled, executed with evidence, approved, and closed with cost and completion history attached. Recurring services and one-off interventions run through the same model, and an external provider can execute work inside a building without gaining access to everything else in it.
+
+The place stays central. Requests, interventions, costs, and proof accumulate against the location itself, so the history survives a change of tenant, team, or provider.
 
 ---
 
