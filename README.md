@@ -54,7 +54,7 @@ It models entities, sites, roles, permissions, scheduling, assignments, configur
 
 The domain layer changes per product. The engine does not.
 
-### medNEXT — the engine applied to healthcare
+### MDXT-OPS — the engine applied to healthcare
 
 Patient-centered workflows, multidisciplinary collaboration, planning, permissions, structured records, and traceability.
 
@@ -62,7 +62,7 @@ It connects patients, professionals, care teams, family members, representatives
 
 The patient stays central, and can understand what is happening, who is involved, what has been done, what is planned, and what changed.
 
-### Ecopick — the engine applied to buildings and services
+### ECPK — the engine applied to buildings and services
 
 Fragmented building work across real locations: buildings, apartments, offices, rooms, shared areas, assets, tenants, administrators, internal teams, and external service providers.
 
