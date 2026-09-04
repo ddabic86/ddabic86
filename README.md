@@ -62,11 +62,15 @@ It connects patients, professionals, care teams, family members, representatives
 
 The patient stays central, and can understand what is happening, who is involved, what has been done, what is planned, and what changed.
 
-### ECPK — the engine applied to buildings and services
+### ECPK — the engine applied to buildings, then opened as a platform
 
 Fragmented building work across real locations: buildings, apartments, offices, rooms, shared areas, assets, tenants, administrators, internal teams, and external service providers.
 
-A request can be opened from the place where the problem exists — home, office, building area, QR point, asset, room, or service zone — then routed, assigned, scheduled, executed with evidence, approved, and closed with cost and completion history attached. Recurring services and one-off interventions run through the same model, and an external provider can execute work inside a building without gaining access to everything else in it.
+A request can be opened from the place where the problem exists — home, office, building area, QR point, asset, room, or service zone — then routed, assigned, scheduled, executed with evidence, approved, and closed with cost and completion history attached. Recurring subscriptions run through the same record as one-off requests, with plans, allowances, scheduled pauses, and invoices. Work is dispatched as offers against real capacity — crews, shifts, duty templates, vehicles — that a provider accepts or declines before anything is committed.
+
+Sensitive actions can require a named approver instead of a role check alone. AI sits on top as accountable assistance rather than authority: triage and routing suggestions carry a confidence score, the model and prompt version behind them, and a dismiss/flag loop that records when the system was wrong.
+
+Then the system opened up. A service company onboards as a provider, is approved by the platform, and runs its own storefront on its own verified domain with its own branding, catalog, pricing, and published content — while dispatch, evidence, governance, and billing stay shared underneath. Commercial terms are data rather than code: packages carry entitlements and limits, and fees, billing state, and suspension are part of the model.
 
 The place stays central. Requests, interventions, costs, and proof accumulate against the location itself, so the history survives a change of tenant, team, or provider.
 
