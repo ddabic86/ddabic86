@@ -92,6 +92,18 @@ Built for a Swiss field-service company, then opened up so any service company c
 <tr><td width="50%" valign="top"><b>A provider's storefront</b><br><img src="assets/ecpk/storefront.png" alt="A provider's public catalogue"></td><td width="50%" valign="top"><b>Loading</b><br><img src="assets/ecpk/loading.png" alt="The Ecopick loading screen"></td></tr>
 </table>
 
+
+**Each provider dresses its own storefront** — logo, colours, home sections and a photo per page and per order stage, edited with a live preview. Below, an invented plumber running on the same engine:
+
+<p align="center">
+  <img src="assets/ecpk/provider-storefront.png" alt="An invented provider's public storefront, in its own colours" width="73%">
+  <img src="assets/ecpk/phone-provider-storefront.png" alt="The same storefront on a phone" width="24%">
+</p>
+<table>
+<tr><td width="50%" valign="top"><b>Brand, with a live preview</b><br><img src="assets/ecpk/storefront-editor-brand.png" alt="Storefront editor: logo, colours and a live preview"></td><td width="50%" valign="top"><b>A photo per order stage</b><br><img src="assets/ecpk/storefront-editor-order-photos.png" alt="Storefront editor: one photo per tracker stage"></td></tr>
+<tr><td width="50%" valign="top"><b>Changing an image</b><br><img src="assets/ecpk/storefront-editor-photo-picker.png" alt="The media library open to pick a new image"></td><td width="50%" valign="top"><b>The provider's own sign-in</b><br><img src="assets/ecpk/provider-login.png" alt="A provider's branded sign-in page with its photo"></td></tr>
+</table>
+
 ### BBGI-OPS — the operational engine
 
 **Structured execution, ownership, proof and live risk for work that happens across many sites.**
