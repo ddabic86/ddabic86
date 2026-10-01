@@ -42,139 +42,142 @@ The real product is the operating model underneath.
 
 ## Private products
 
-Most of my serious repositories are private because they belong to commercial platforms.
+Most of my serious repositories are private because they belong to commercial platforms, so this page shows them instead: each one running locally on an invented world, with the real interface.
 
-They are not separate ideas. BBGI-OPS is the operational engine; MDXT-OPS and ECPK apply the same engine to a different domain, and MiniPlatform takes its rules down to a single small business that runs for free.
+They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS** and **ECPK** apply the same engine to healthcare and to field services. **MiniPlatform** takes its rules down to a single small business that runs for free.
+
+| | Domain | What it runs on |
+|---|---|---|
+| [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · Google Maps · Claude |
+| [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Socket.io · BullMQ · WebAuthn |
+| [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis |
+| [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
+
+### ECPK — field services and buildings, opened up as a multi-provider platform
+
+**The whole life of a service job on one record: the request, the van on the map, the signed report, the paid invoice.**
+
+Built for a Swiss field-service company, then opened up so any service company can run its own branded storefront on the same engine. The place stays central: every job, cost and photo accumulates on the location itself, so the history outlives a change of tenant, team or provider.
+
+`131 data models` · `57 API routers` · `4 languages` · `realtime everywhere`
+
+<p align="center">
+  <img src="assets/ecpk/order-enroute.png" alt="An order on its way: the tracker, the van on the road and its route to the door" width="100%">
+</p>
+<p align="center">
+  <img src="assets/ecpk/phone-order-enroute.png" alt="The order on a phone, the van on its way" width="24%">
+  <img src="assets/ecpk/phone-team-map.png" alt="The crew on the map, on a phone" width="24%">
+  <img src="assets/ecpk/phone-today.png" alt="The operator's day on a phone" width="24%">
+  <img src="assets/ecpk/phone-storefront-service.png" alt="A provider's storefront on a phone" width="24%">
+</p>
+
+| | |
+|---|---|
+| **Orders** | Live tracker with the van on the map, route and ETA · customer/team chat with read receipts · extra-work quotes the customer approves · problem reports · ratings and tips · full history |
+| **Dispatch** | What needs someone now · crew and free vans on the map · seats offered and claimed · absences, moved days, timesheets |
+| **On site** | Offline report with price-list lines, parts, readings, photos, time and the customer's signature — no order closes without it |
+| **Clients & plans** | Client book · subscriptions with allowances, pauses, self-service cancellation · planned pickup rounds |
+| **Swiss billing** | QR-bill · quotes → orders · deposits · credit notes · camt.054 bank import · dunning by country with interest · scheduled sends · VAT return prefill · accounting export |
+| **Marketplace** | Each provider gets a storefront on a subdomain or its own domain, with its brand, catalogue and plans · platform packages, limits and fees |
+| **Reach** | Bell → live toast → Web Push → e-mail, SMS, WhatsApp or Telegram, each opt-in and verified |
+| **Trust** | Passkeys and 2FA · fail-closed permissions · one-role-per-company · three audit streams · a double tap never files twice |
+| **AI** | Claude translates the catalogue and invoices into four languages and drafts invoice wording from the facts — never the numbers |
+
+<table>
+<tr><td width="50%" valign="top"><b>The crew and the vans, live</b><br><img src="assets/ecpk/team-map.png" alt="Team map: operators at their positions, free vans at their bases"></td><td width="50%" valign="top"><b>The dispatcher's day</b><br><img src="assets/ecpk/today.png" alt="The day page: what needs someone, the day's figures, the crew on the map"></td></tr>
+<tr><td width="50%" valign="top"><b>The on-site report</b><br><img src="assets/ecpk/order-report.png" alt="On-site report: lines, parts, readings, photos and time beside the printed report"></td><td width="50%" valign="top"><b>Signed by the customer</b><br><img src="assets/ecpk/order-report-signed.png" alt="The customer signing the report"></td></tr>
+<tr><td width="50%" valign="top"><b>Chat on the order</b><br><img src="assets/ecpk/order-chat.png" alt="Customer and team chat on an order, with read ticks"></td><td width="50%" valign="top"><b>The order's history</b><br><img src="assets/ecpk/order-history.png" alt="Every moment of an order"></td></tr>
+<tr><td width="50%" valign="top"><b>Closed, rated, paid</b><br><img src="assets/ecpk/order-closed.png" alt="A closed order with its rating, report and paid invoice"></td><td width="50%" valign="top"><b>Invoice register</b><br><img src="assets/ecpk/billing-register.png" alt="Invoice register with drafts, reminders and paid bills"></td></tr>
+<tr><td width="50%" valign="top"><b>Invoice with Swiss QR-bill</b><br><img src="assets/ecpk/invoice-qr.png" alt="An invoice with its Swiss QR-bill"></td><td width="50%" valign="top"><b>Billing trends</b><br><img src="assets/ecpk/billing-stats.png" alt="Billing trends: invoiced vs collected, overdue, days to get paid"></td></tr>
+<tr><td width="50%" valign="top"><b>A provider's storefront</b><br><img src="assets/ecpk/storefront.png" alt="A provider's public catalogue"></td><td width="50%" valign="top"><b>Loading</b><br><img src="assets/ecpk/loading.png" alt="The Ecopick loading screen"></td></tr>
+</table>
 
 ### BBGI-OPS — the operational engine
 
-<p align="center">
-  <img src="assets/bbgi-ops/cockpit-desktop.png" alt="BBGI-OPS cockpit: a live door-held response beside the office handover" width="72%">
-  &nbsp;
-  <img src="assets/bbgi-ops/phone-cockpit.png" alt="The same cockpit on a phone" width="22%">
-</p>
+**Structured execution, ownership, proof and live risk for work that happens across many sites.**
 
-A generic engine for structured execution, responsibility, visibility, operational governance, priority, risk awareness, and control.
-
-It models entities, sites, roles, permissions, scheduling, assignments, configurable procedures, execution state, evidence, escalation, risk, and history — without assuming an industry. It is built for work that needs ownership, follow-through, permissions, proof, auditability, and live operational visibility, where spreadsheets, notes, chats, and disconnected dashboards are too weak.
-
-Its first domain is multi-site security and facilities. Space is modelled from organization down to region, site, building, floor, zone and room, with typed assets and checkpoints. Procedures are reusable templates of ordered steps — typed answers, per-step competency gates, multiple signatures, dependencies, issue flagging, and follow-up work triggered by an answer — and each site can override parts of a procedure without forking it. Planning is separate from staffing: posts carry their recurring work, shift templates define seats, and people claim seats gated by role, certification, post qualification, working-time limits and overlap checks.
-
-On shift, the cockpit is a live timeline of the operational day: check-in and check-out as presence, join, pause, postpone, skip and assign on duties, and urgent responses that hold other work. Alarms spawn response procedures; issues are collaborative tickets linked to the duty, step and asset they came from; the handover carries what is still open into the next shift. Risk is scored 0–100 per duty, alarm, issue and site, with history, and the Command Center ranks offices and at-risk duties with their trends.
-
-Authorization has three layers — stacked roles with per-membership permission matrices, per-item stakeholders, and overrides — and every mutation is governance-tagged and audited.
-
-The domain layer changes per product. The engine does not.
-
-<details>
-<summary>More screenshots</summary>
-
-| Command Center | A completed duty with its evidence |
-|---|---|
-| ![Command Center ranking offices and duties by risk](assets/bbgi-ops/command-center.png) | ![A fire-door audit: each step with who ticked it and when, an issue flagged, the signature](assets/bbgi-ops/duty-steps-evidence.png) |
-| **Schedule** | **An issue ticket** |
-| ![Schedule day view with shifts, seats, the day's duties and coverage](assets/bbgi-ops/schedule-day-plan.png) | ![An issue as a thread of typed updates](assets/bbgi-ops/issue-ticket.png) |
-| **Loading screen** | **On a phone** |
-| ![The app's loading screen with the logo](assets/bbgi-ops/loading.png) | <img src="assets/bbgi-ops/phone-loading.png" alt="Loading screen on a phone" width="45%"> |
-
-</details>
-
-### MDXT-OPS — the engine applied to healthcare
+A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/cockpit-dark.png">
-    <img src="assets/mdxt-ops/cockpit.png" alt="MDXT-OPS shift cockpit: duties with steps, co-signatures and risk" width="72%">
-  </picture>
-  &nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-cockpit-dark.png">
-    <img src="assets/mdxt-ops/phone-cockpit.png" alt="The same cockpit on a phone" width="22%">
-  </picture>
+  <img src="assets/bbgi-ops/cockpit-desktop.png" alt="The cockpit: a live door-held response beside the office handover" width="100%">
+</p>
+<p align="center">
+  <img src="assets/bbgi-ops/phone-cockpit.png" alt="The cockpit on a phone" width="24%">
+  <img src="assets/bbgi-ops/phone-command-center.png" alt="The Command Center on a phone" width="24%">
+  <img src="assets/bbgi-ops/phone-handover.png" alt="The handover on a phone" width="24%">
+  <img src="assets/bbgi-ops/phone-loading.png" alt="Loading screen on a phone" width="24%">
 </p>
 
-Patient-centered care for nursing homes and home-care services: structures, locations, wards, rooms and beds, the people who work there, and the patients they look after.
+- **Space as a model** — organization → region → site → building → floor → zone → room, with typed assets (doors included) and checkpoints.
+- **Procedures, not checklists** — reusable templates of ordered steps with typed answers, per-step competency gates, multiple signatures, dependencies, issue flagging and follow-up work triggered by an answer; each site can override a step without forking the procedure.
+- **Planning separate from staffing** — posts carry their recurring work, shift templates define seats; people claim seats gated by role, certification, post qualification, working-time limits and overlap checks.
+- **The cockpit** — a live timeline of the operational day: check-in and check-out as presence, join, pause, postpone, skip and assign on duties, urgent responses that hold other work, and a handover that carries what is still open into the next shift.
+- **Alarms and issues** — alarms spawn response procedures; issues are collaborative tickets linked to the duty, step and asset they came from.
+- **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
+- **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
-The patient record is split into patient and episode — problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal — and access to it is granular: consent per role, a per-record access list, invitations for family and outside professionals, and logged break-glass emergency access. Every read is audited, not only every write.
+<table>
+<tr><td width="50%" valign="top"><b>Command Center</b><br><img src="assets/bbgi-ops/command-center.png" alt="Command Center ranking offices and duties by risk"></td><td width="50%" valign="top"><b>A duty with its evidence</b><br><img src="assets/bbgi-ops/duty-steps-evidence.png" alt="A fire-door audit: each step with who ticked it and when, an issue flagged, the signature"></td></tr>
+<tr><td width="50%" valign="top"><b>Schedule and coverage</b><br><img src="assets/bbgi-ops/schedule-day-plan.png" alt="Schedule day view with shifts, seats, the day's duties and coverage"></td><td width="50%" valign="top"><b>An issue ticket</b><br><img src="assets/bbgi-ops/issue-ticket.png" alt="An issue as a thread of typed updates"></td></tr>
+<tr><td width="50%" valign="top"><b>Roles and permissions</b><br><img src="assets/bbgi-ops/roles-permissions.png" alt="A membership's role, scope and permission matrix"></td><td width="50%" valign="top"><b>Loading</b><br><img src="assets/bbgi-ops/loading.png" alt="The app's loading screen"></td></tr>
+</table>
 
-Care plans are built on the Swiss national care-service catalogue and turn into each day's work. Staffing runs from recurring shift templates published into a rota, a temp market with availability matching and offers, absences, contracts and hours balances, with working-time and rest rules enforced. On shift, the cockpit shows duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
+### MDXT-OPS — the engine applied to care
 
-Completed care becomes billable items split between insurer, public payer and client, then bills with the Swiss QR-bill, payments and reminders.
+**Patient-centred care for nursing homes and home-care services, where every read of a record is logged.**
 
-<details>
-<summary>More screenshots</summary>
-
-| Patient dossier | Care plan |
-|---|---|
-| ![Patient dossier with problems, ICD codes, medication and goals](assets/mdxt-ops/dossier.png) | ![Care plan on the national care-service catalogue and the week it produces](assets/mdxt-ops/care-plan.png) |
-| **Month rota** | **Billing** |
-| ![Month rota with shifts, open seats and planned hours](assets/mdxt-ops/schedule.png) | ![Bills register with drafts, bills to collect and due dates](assets/mdxt-ops/billing.png) |
-| **Loading screen** | **On a phone** |
-| ![The app's loading screen with the logo](assets/mdxt-ops/loading.png) | <img src="assets/mdxt-ops/phone-loading.png" alt="Loading screen on a phone" width="45%"> |
-
-</details>
-
-### ECPK — the engine applied to buildings and field services, then opened as a platform
+Structures, locations, wards, rooms and beds, the people who work there and the patients they look after — with the patient kept at the centre: who is involved, what was done, what is planned, and what changed. Screens follow the system theme: light or dark.
 
 <p align="center">
-  <img src="assets/ecpk/order-enroute.png" alt="ECPK order on its way: live tracker, the van on the road and its route to the door" width="72%">
-  &nbsp;
-  <img src="assets/ecpk/phone-order-enroute.png" alt="The same order on a phone" width="22%">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/cockpit-dark.png"><img src="assets/mdxt-ops/cockpit.png" alt="The shift cockpit: duties with steps, co-signatures and risk" width="100%"></picture>
+</p>
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-cockpit-dark.png"><img src="assets/mdxt-ops/phone-cockpit.png" alt="The cockpit on a phone" width="24%"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-home-dark.png"><img src="assets/mdxt-ops/phone-home.png" alt="The structure's day on a phone" width="24%"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-dossier-dark.png"><img src="assets/mdxt-ops/phone-dossier.png" alt="A patient record on a phone" width="24%"></picture>
+  <img src="assets/mdxt-ops/phone-loading.png" alt="Loading screen on a phone" width="24%">
 </p>
 
-Fragmented building and field-service work across real locations: buildings, apartments, offices, rooms, shared areas, assets, tenants, administrators, internal crews, and external service providers.
+- **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
+- **Access as a list, not a role** — consent per role, a per-record access list, invitations for family and outside professionals, and break-glass emergency access that is loud and logged.
+- **Care plans that become the day** — built on the Swiss national care-service catalogue, turned into each day's work, with home-care visit rounds and a bed board with placements over time.
+- **Staffing** — recurring shift templates published into a rota, a temp market with availability matching and offers, absences, contracts and hours balances, working-time and rest rules enforced.
+- **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
+- **Billing** — completed care becomes billable items split between insurer, public payer and client, then bills with the Swiss QR-bill, payments and reminders.
 
-An order can be opened from the place where the problem exists, then routed, offered to crews, scheduled, tracked live on a map, executed with an on-site report — price-list lines, readings, photos, worked time and the customer's signature, working offline and syncing later — and closed with cost and completion history attached. The dispatcher's day shows what needs attention now (late or unassigned work, unanswered seats, bills to send), who is on what, absences and timesheets. One order page serves the customer and the crew: a live tracker, schedule proposals, a two-lane chat with read receipts, extra-work quotes that the customer approves, problem reports, ratings and tips, and the full history.
+<table>
+<tr><td width="50%" valign="top"><b>The structure's day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/home-dark.png"><img src="assets/mdxt-ops/home.png" alt="The structure's day: open shifts and a temp nurse's applications"></picture></td><td width="50%" valign="top"><b>The patient record</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/dossier-dark.png"><img src="assets/mdxt-ops/dossier.png" alt="A patient record with problems, ICD codes, medication and goals"></picture></td></tr>
+<tr><td width="50%" valign="top"><b>Care plan</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/care-plan-dark.png"><img src="assets/mdxt-ops/care-plan.png" alt="A care plan on the national catalogue and the week it produces"></picture></td><td width="50%" valign="top"><b>Month rota</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/schedule-dark.png"><img src="assets/mdxt-ops/schedule.png" alt="Month rota with shifts, open seats and planned hours"></picture></td></tr>
+<tr><td width="50%" valign="top"><b>The team</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/team-dark.png"><img src="assets/mdxt-ops/team.png" alt="The structure's people, their roles and a membership request"></picture></td><td width="50%" valign="top"><b>Billing</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/billing-dark.png"><img src="assets/mdxt-ops/billing.png" alt="Bills register with drafts, bills to collect and due dates"></picture></td></tr>
+</table>
 
-Recurring plans run through the same record as one-off orders, with allowances, pro-rated advance billing, pauses and cancellations. Billing is Swiss: QR-bill, quotes that turn into orders, credit notes, partial payments with camt.054 bank import, reminders by country with late interest, scheduled sends, VAT and journal export.
+### MiniPlatform — a subscription manager that costs nothing to run
 
-Then the system opened up. A service company onboards as a provider, is approved by the platform, and runs its own storefront on a subdomain or its own verified domain, with its own branding, catalog, plans and content — while dispatch, evidence, governance and billing stay shared underneath. Commercial terms are data rather than code: packages carry entitlements and limits, and platform fees, billing standing and suspension are part of the model.
+**The same rules at the smallest scale: one business, a handful of customers, no paid services.**
 
-AI sits on top as accountable assistance rather than authority: it translates the catalogue and invoice texts into four languages and drafts invoice wording from the work's own facts, never the numbers.
-
-The place stays central. Orders, interventions, costs and proof accumulate against the location itself, so the history survives a change of tenant, team, or provider.
-
-<details>
-<summary>More screenshots</summary>
-
-| The crew on the map | The on-site report |
-|---|---|
-| ![Team map with operators at their positions and free vans at their bases](assets/ecpk/team-map.png) | ![On-site report: lines, parts, readings, photos and time beside the printed report](assets/ecpk/order-report.png) |
-| **A closed order** | **Invoice register** |
-| ![Closed order with its rating, report and paid invoice](assets/ecpk/order-closed.png) | ![Invoice register with drafts, reminders and paid bills](assets/ecpk/billing-register.png) |
-| **An invoice with its Swiss QR-bill** | **Billing trends** |
-| ![An invoice's paper with the Swiss QR-bill](assets/ecpk/invoice-qr.png) | ![Billing trends: invoiced vs collected, overdue, days to get paid](assets/ecpk/billing-stats.png) |
-| **A provider's storefront** | **Loading screen** |
-| ![A public service page of a provider's storefront](assets/ecpk/storefront-service.png) | ![The Ecopick loading screen](assets/ecpk/loading.png) |
-
-</details>
-
-### MiniPlatform — a small, free-to-run subscription manager
+For an owner who tracks renewals in a spreadsheet and wants to stop — without paying for a SaaS, an e-mail provider or an SMS gateway. No Redis, no queue, no object storage: Postgres and a daily job. Italian by default, English included.
 
 <p align="center">
-  <img src="assets/miniplatform/dashboard.png" alt="MiniPlatform dashboard with the WhatsApp messages to send" width="72%">
-  &nbsp;
-  <img src="assets/miniplatform/phone-dashboard.png" alt="The same dashboard on a phone" width="22%">
+  <img src="assets/miniplatform/dashboard.png" alt="The dashboard with the reminders to send on WhatsApp" width="100%">
+</p>
+<p align="center">
+  <img src="assets/miniplatform/phone-dashboard.png" alt="The dashboard on a phone" width="24%">
+  <img src="assets/miniplatform/customer.png" alt="A customer's own area on a phone" width="24%">
+  <img src="assets/miniplatform/welcome.png" alt="The first sign-in from a one-time link" width="24%">
+  <img src="assets/miniplatform/phone-loading.png" alt="Loading screen on a phone" width="24%">
 </p>
 
-The same principles at the smallest scale: one business, a handful of customers, nothing paid to run it — no e-mail provider, no SMS gateway, no Redis.
+- **One book for people and their subscriptions** — renewals, pauses, promotions; access handed over by a one-time WhatsApp link with a step-by-step first sign-in.
+- **Reminders that never go twice** — a daily job prepares them before a subscription ends, idempotently; sent on WhatsApp by hand or through the Cloud API, or on Telegram.
+- **Billing** — gap-free invoices, payments and credit notes sent as signed links, automatic overdue reminders, the Swiss QR-bill and Italian FatturaPA XML.
+- **Security without a provider** — e-mail and password done carefully, Postgres-backed rate limits, a security console with blocks and the activity log, and roles with a permissions matrix.
+- **Tested** — Vitest for the money and dates, Playwright end-to-end on GitHub Actions; deployable for free on Vercel and Neon.
 
-People and their subscriptions live in one book, with renewals, pauses and promotions; access is handed over by a one-time WhatsApp link with a step-by-step first sign-in. A daily job prepares the reminders before a subscription ends, idempotently, for sending on WhatsApp by hand or through the Cloud API, or on Telegram. Billing issues gap-free invoices, payments and credit notes, sent as signed links, with automatic overdue reminders, the Swiss QR-bill and Italian FatturaPA XML. Roles carry a permissions matrix, and a security console handles rate limits, blocks and the activity log.
-
-<details>
-<summary>More screenshots</summary>
-
-| People | Billing |
-|---|---|
-| ![People and their subscriptions, one person open](assets/miniplatform/people.png) | ![Billing register](assets/miniplatform/billing.png) |
-| **An invoice with its QR-bill** | **Roles and permissions** |
-| ![An unpaid invoice's paper with the Swiss QR-bill](assets/miniplatform/invoice.png) | ![Roles with a permissions matrix](assets/miniplatform/roles.png) |
-| **Loading screen** | **On a phone** |
-| ![The loading screen with the company's logo](assets/miniplatform/loading.png) | <img src="assets/miniplatform/phone-loading.png" alt="Loading screen on a phone" width="45%"> |
-| **Loading screen** | **On a phone** |
-| ![The loading screen with the company's logo](assets/miniplatform/loading.png) | <img src="assets/miniplatform/phone-loading.png" alt="Loading screen on a phone" width="45%"> |
-
-</details>
+<table>
+<tr><td width="50%" valign="top"><b>People and subscriptions</b><br><img src="assets/miniplatform/people.png" alt="People and their subscriptions, one person open"></td><td width="50%" valign="top"><b>Billing</b><br><img src="assets/miniplatform/billing.png" alt="The billing register"></td></tr>
+<tr><td width="50%" valign="top"><b>Invoice with QR-bill</b><br><img src="assets/miniplatform/invoice.png" alt="An invoice with its Swiss QR-bill"></td><td width="50%" valign="top"><b>Roles and permissions</b><br><img src="assets/miniplatform/roles.png" alt="Roles with a permissions matrix"></td></tr>
+<tr><td width="50%" valign="top"><b>Your brand</b><br><img src="assets/miniplatform/settings.png" alt="The company's appearance: logo, button colour, corners"></td><td width="50%" valign="top"><b>Sign-in</b><br><img src="assets/miniplatform/login.png" alt="The sign-in page with the company's logo"></td></tr>
+</table>
 
 > All names, addresses, e-mail addresses and phone numbers in the screenshots are made up; every product was run locally on an invented world for them.
 
