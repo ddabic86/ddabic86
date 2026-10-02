@@ -72,15 +72,11 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
-**Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
+**Schedule and coverage · on shift, together** — left, the night shift on the planner's phone: the roster suggests who to put in the open seat, refuses someone not qualified for the post, and coverage fills. Right, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
-</p>
-
-**On shift, together** — the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift:
-
-<p align="center">
+  <img src="assets/bbgi-ops/bbgi-phone-schedule.webp" alt="On a phone: the night shift's open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage filling" width="44%">
+  &nbsp;
   <img src="assets/bbgi-ops/bbgi-phone-cockpit-team.webp" alt="The roster, a door-held alarm holding other work, joining and closing the response, and the handover at check-out" width="44%">
 </p>
 
@@ -213,16 +209,12 @@ For an owner who tracks renewals in a spreadsheet and wants to stop — without 
 - **Security without a provider** — e-mail and password done carefully, Postgres-backed rate limits, a security console with blocks and the activity log, and roles with a permissions matrix.
 - **Tested** — Vitest for the money and dates, Playwright end-to-end on GitHub Actions; deployable for free on Vercel and Neon.
 
-**An overdue bill** — the register's "to sort out", the invoice with its Swiss QR-bill, and the payment recorded:
+**An overdue bill · a new customer's first link** — left, the register's "to sort out", the invoice with its Swiss QR-bill, and the payment recorded. Right, on the customer's phone, the one-time link the studio sends on WhatsApp: check the e-mail, make a password, and the customer's own area:
 
 <p align="center">
-  <img src="assets/miniplatform/mini-bill.webp" alt="An overdue invoice opened to its paper with the QR-bill, then a TWINT payment recorded and the invoice turning into a receipt" width="100%">
-</p>
-
-**A new customer's first link** — the one-time link the studio sends on WhatsApp: check the e-mail, make a password, and the customer's own area:
-
-<p align="center">
-  <img src="assets/miniplatform/mini-phone-welcome.webp" alt="A new customer opens the one-time link on a phone, checks the e-mail, sets a password and lands on their subscriptions" width="44%">
+  <img src="assets/miniplatform/mini-bill.webp" alt="An overdue invoice opened to its paper with the QR-bill, then a TWINT payment recorded and the invoice turning into a receipt" width="64%">
+  &nbsp;
+  <img src="assets/miniplatform/mini-phone-welcome.webp" alt="A new customer opens the one-time link on a phone, checks the e-mail, sets a password and lands on their subscriptions" width="32%">
 </p>
 
 > All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run locally on an invented world and driven for real to record them.
