@@ -139,7 +139,7 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 **People and structures, each with a page** — the directory of practitioners who put their page on show, narrowed to home care; a nurse's page with her credentials and their expiry, her CV, languages and availability; then the structures, and a care home's page with its visiting hours, fields of care and authorisations:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-phone-showcase-directory.webp" alt="The directory on a phone: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="44%">
+  <img src="assets/mdxt-ops/mdxt-showcase-directory.webp" alt="The directory: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="100%">
 </p>
 
 **Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
