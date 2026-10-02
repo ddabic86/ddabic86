@@ -57,9 +57,7 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-cockpit-duty.webp" alt="A guard works an overdue fire-door audit in the cockpit: each door ticked as its risk falls, a flagged magnet, a colleague joins and co-signs, and it completes" width="64%">
-  &nbsp;
-  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: a guard works the fire-door audit, ticking doors and reporting a magnet issue" width="32%">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: a guard works the fire-door audit, ticking doors and reporting a magnet issue" width="44%">
 </p>
 
 - **Space as a model** — organization → region → site → building → floor → zone → room, with typed assets (doors included) and checkpoints.
@@ -73,9 +71,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 **The Command Center** — every office and duty on one live 0–100 risk index with its trend: an alarm pushes an office up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center live: an alarm raises Lugano, a check-in and a completed check lower Zürich and Bellinzona, then the drill-down into one office" width="64%">
-  &nbsp;
-  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="32%">
+  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="44%">
 </p>
 
 **Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
