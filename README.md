@@ -74,6 +74,14 @@ A generic engine for work that needs follow-through: who owns it, who may act on
   <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center live: an alarm raises Lugano, a check-in and a completed check lower Zürich and Bellinzona, then the drill-down into one office" width="100%">
 </p>
 
+**The same on a phone** — the fire-door audit worked from the guard's phone, and the Command Center in the pocket:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: a guard works the fire-door audit, ticking doors and reporting a magnet issue" width="44%">
+  &nbsp;
+  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="44%">
+</p>
+
 **Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
 
 <p align="center">
