@@ -133,19 +133,13 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 **At the client's door** — the performances inside the visit, each in the structure's own version of the national catalogue: started, every step ticked, signed. The day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-visit-performances.webp" alt="At the client's home: medication and help with undressing are started, ticked and signed from the client's panel, the billable lines fill in, and the visit is signed off" width="100%">
-</p>
-<p align="center">
-  <img src="assets/mdxt-ops/mdxt-phone-visit-performances.webp" alt="The same visit on a phone" width="44%">
+  <img src="assets/mdxt-ops/mdxt-phone-visit-performances.webp" alt="At the client's home on a phone: medication and help with undressing are started, ticked and signed from the client's panel, the billable lines fill in, and the visit is signed off" width="44%">
 </p>
 
 **People and structures, each with a page** — the directory of practitioners who put their page on show, narrowed to home care; a nurse's page with her credentials and their expiry, her CV, languages and availability; then the structures, and a care home's page with its visiting hours, fields of care and authorisations:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-showcase-directory.webp" alt="The directory: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="100%">
-</p>
-<p align="center">
-  <img src="assets/mdxt-ops/mdxt-phone-showcase-directory.webp" alt="The same directory on a phone" width="44%">
+  <img src="assets/mdxt-ops/mdxt-phone-showcase-directory.webp" alt="The directory on a phone: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="44%">
 </p>
 
 **Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
