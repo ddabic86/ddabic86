@@ -140,6 +140,8 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 
 Structures, locations, wards, rooms and beds, the people who work there and the patients they look after — with the patient kept at the centre: who is involved, what was done, what is planned, and what changed. Screens follow the system theme: light or dark.
 
+**Not built for one country.** The country is a setting: it decides the coding system for problems, the assessment instrument, the tariff scheme, the payers and the regions people work in. Switzerland is the first one configured; another country is new reference data, not a new product.
+
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-cockpit-duty.webp" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
 </p>
@@ -150,10 +152,13 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 
 - **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
 - **Access as a list, not a role** — consent per role, a per-record access list, invitations for family and outside professionals, and break-glass emergency access that is loud and logged.
-- **Care plans that become the day** — built on the Swiss national care-service catalogue, turned into each day's work, with home-care visit rounds and a bed board with placements over time.
-- **Staffing** — recurring shift templates published into a rota, a temp market with availability matching and offers, absences, contracts and hours balances, working-time and rest rules enforced.
+- **Care plans that become the day** — built on the country's care-service catalogue, turned into each day's work, with home-care visit rounds and a bed board with placements over time.
+- **Operations each structure shapes** — a base catalogue of operations to start from; a structure takes one and makes it its own (steps, duration, tariffs, risk, who may do it, where it applies) or writes its own from scratch. Nothing changes under it because the base was edited.
+- **Staffing** — recurring shift templates published into a rota, absences, contracts and hours balances, working-time and rest rules enforced.
+- **An open market for the shifts nobody can cover** — a post the team cannot fill can be opened to outside professionals, one day or a whole week as one job. They see it, apply or get offered it by name, and only qualify if they hold the required role and certifications — an expired credential counts as not held — and the shift fits their working-time and rest limits.
+- **Live, who is where and allowed to be** — who is online and available, who is on shift, which duty each person is on right now, and what they are certified for, with expiry dates tracked.
 - **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
-- **Billing** — completed care becomes billable items split between insurer, public payer and client, then bills with the Swiss QR-bill, payments and reminders.
+- **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
 
 **On shift, together** — the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it, and raises a response:
 
