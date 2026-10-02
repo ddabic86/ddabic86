@@ -142,13 +142,11 @@ Built for a Swiss field-service company, then opened up so any service company c
 A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
 
 <p align="center">
-  <img src="assets/bbgi-ops/cockpit-desktop.png" alt="The cockpit: a live door-held response beside the office handover" width="100%">
+  <img src="assets/bbgi-ops/bbgi-cockpit-duty.webp" alt="A guard works an overdue fire-door audit in the cockpit: each door ticked as its risk falls, a flagged magnet, a colleague joins and co-signs, and it completes" width="100%">
 </p>
 <p align="center">
-  <img src="assets/bbgi-ops/phone-cockpit.png" alt="The cockpit on a phone" width="24%">
-  <img src="assets/bbgi-ops/phone-command-center.png" alt="The Command Center on a phone" width="24%">
-  <img src="assets/bbgi-ops/phone-handover.png" alt="The handover on a phone" width="24%">
-  <img src="assets/bbgi-ops/phone-loading.png" alt="Loading screen on a phone" width="24%">
+  <img src="assets/bbgi-ops/bbgi-tablet-cockpit-duty.webp" alt="The same on a tablet" width="52%">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="The same on a phone" width="46%">
 </p>
 
 - **Space as a model** — organization → region → site → building → floor → zone → room, with typed assets (doors included) and checkpoints.
@@ -159,11 +157,45 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
-<table>
-<tr><td width="50%" valign="top"><b>Command Center</b><br><img src="assets/bbgi-ops/command-center.png" alt="Command Center ranking offices and duties by risk"></td><td width="50%" valign="top"><b>A duty with its evidence</b><br><img src="assets/bbgi-ops/duty-steps-evidence.png" alt="A fire-door audit: each step with who ticked it and when, an issue flagged, the signature"></td></tr>
-<tr><td width="50%" valign="top"><b>Schedule and coverage</b><br><img src="assets/bbgi-ops/schedule-day-plan.png" alt="Schedule day view with shifts, seats, the day's duties and coverage"></td><td width="50%" valign="top"><b>An issue ticket</b><br><img src="assets/bbgi-ops/issue-ticket.png" alt="An issue as a thread of typed updates"></td></tr>
-<tr><td width="50%" valign="top"><b>Roles and permissions</b><br><img src="assets/bbgi-ops/roles-permissions.png" alt="A membership's role, scope and permission matrix"></td><td width="50%" valign="top"><b>Loading</b><br><img src="assets/bbgi-ops/loading.png" alt="The app's loading screen"></td></tr>
-</table>
+**The Command Center** — every office and duty on one live 0–100 risk index with its trend: an alarm pushes an office up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center live: an alarm raises Lugano, a check-in and a completed check lower Zürich and Bellinzona, then the drill-down into one office" width="100%">
+</p>
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-tablet-command-center.webp" alt="The same on a tablet" width="52%">
+  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="The same on a phone" width="46%">
+</p>
+
+**Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
+</p>
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-tablet-schedule.webp" alt="The same on a tablet" width="52%">
+  <img src="assets/bbgi-ops/bbgi-phone-schedule.webp" alt="The same on a phone" width="46%">
+</p>
+
+**On shift, together** — the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-cockpit-team.webp" alt="The roster, a door-held alarm holding other work, joining and closing the response, and the handover at check-out" width="100%">
+</p>
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-tablet-cockpit-team.webp" alt="The same on a tablet" width="52%">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-team.webp" alt="The same on a phone" width="46%">
+</p>
+
+**Around the engine** — a site, an issue ticket as a thread of updates, a membership's role and permission matrix, and a completed duty opened to its evidence:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-tour.webp" alt="A tour: a site, an issue ticket, a role and permission matrix, and the evidence of a completed fire-door audit with both signatures" width="100%">
+</p>
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-tablet-tour.webp" alt="The same on a tablet" width="52%">
+  <img src="assets/bbgi-ops/bbgi-phone-tour.webp" alt="The same on a phone" width="46%">
+</p>
 
 ### MDXT-OPS — the engine applied to care
 
