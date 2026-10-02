@@ -161,6 +161,14 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **Live, and on the road** — the engine's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
 - **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
 
+**Answers that open the next work** — left, the vital-signs round's last step answered *Fever*: a fever protocol and a fluids and comfort round open on the shift the moment it is saved; the fever protocol comes back *Still high*, and that answer opens a doctor's visit in turn. Right, a fall response raised from the cockpit, whose last answer is the injury — *Head injury* opens neuro observations and family informed on the same shift. The rules live on each step ("Completing it opens" in the step editor):
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-phone-branch-duty.webp" alt="On a phone: the vital-signs round's out-of-range values answered Fever opens a fever protocol and a fluids and comfort round; the fever protocol answered Still high opens a doctor's visit" width="44%">
+  &nbsp;
+  <img src="assets/mdxt-ops/mdxt-phone-branch-response.webp" alt="On a phone: a fall response raised from the cockpit, a note on what happened, its last step Injury answered Head injury opens neuro observations and family informed" width="44%">
+</p>
+
 **On shift, together · at the client's door** — left, the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it and raises a response. Right, the performances inside a home visit, each in the structure's own version of the national catalogue: started, every step ticked, signed — the day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
 
 <p align="center">
