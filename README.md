@@ -12,7 +12,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/hero/hero.webp" alt="A montage of the three engines: BBGI-OPS's live risk board reordering, MDXT-OPS's cockpit ticking and signing a medication round, and ECPK's customer tracker following the van to the door" width="100%">
+  <img src="assets/hero/hero.webp" alt="A montage of the three engines: BBGI-OPS's cockpit, a guard ticking a fire-door audit, then the live risk board; MDXT-OPS's cockpit signing a medication round, then a home-care leg drawn on the map; ECPK's customer ordering a pickup, then the van followed to the door" width="100%">
 </p>
 
 <p align="center"><sub><b>BBGI-OPS</b> · <b>MDXT-OPS</b> · <b>ECPK</b> — three private platforms on one engine, each run locally on an invented world and driven for real.</sub></p>
