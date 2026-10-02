@@ -17,11 +17,6 @@
 
 I build software for real-world operations.
 
-Not generic templates.
-Not landing pages.
-Not dashboard-only software.
-Not isolated CRUD apps dressed up as products.
-
 I build systems where people, places, entities, roles, permissions, schedules, approvals, records, evidence, risk, priority, business rules, AI support, and execution need to stay connected.
 
 The goal is simple:
@@ -48,10 +43,12 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 
 | | Domain | What it runs on |
 |---|---|---|
-| [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Socket.io · BullMQ · WebAuthn |
-| [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · Google Maps |
-| [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · Google Maps · Claude |
+| [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
 | [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
+
+**One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
 
 ### BBGI-OPS — the operational engine
 
@@ -118,21 +115,17 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **Live, and on the road** — the engine's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
 - **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
 
-**On shift, together** — the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it, and raises a response:
-
-<p align="center">
-  <img src="assets/mdxt-ops/mdxt-phone-cockpit-team.webp" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="44%">
-</p>
-
 **On the road** — a home-care round: the nurse raises the leg to the next client from the round itself, the phone's GPS draws the drive on the map, and the distance and time are sealed into the record when she signs it off:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-phone-travel.webp" alt="A home-care nurse raises a travel leg to her next client, drives it with the GPS track drawn live on the map, signs it at 3.9 km and starts the visit" width="44%">
+  <img src="assets/mdxt-ops/mdxt-travel.webp" alt="A home-care nurse raises a travel leg to her next client, drives it with the GPS track drawn live on the map, signs it at 3.9 km and starts the visit" width="100%">
 </p>
 
-**At the client's door** — the performances inside the visit, each in the structure's own version of the national catalogue: started, every step ticked, signed. The day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
+**On shift, together · at the client's door** — left, the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it and raises a response. Right, the performances inside a home visit, each in the structure's own version of the national catalogue: started, every step ticked, signed — the day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
 
 <p align="center">
+  <img src="assets/mdxt-ops/mdxt-phone-cockpit-team.webp" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="44%">
+  &nbsp;
   <img src="assets/mdxt-ops/mdxt-phone-visit-performances.webp" alt="At the client's home on a phone: medication and help with undressing are started, ticked and signed from the client's panel, the billable lines fill in, and the visit is signed off" width="44%">
 </p>
 
@@ -159,7 +152,7 @@ Built for a Swiss field-service company, then opened up so any service company c
 **A customer orders** — a bulky-waste pickup from the storefront: the place, the service, when, a note, and the request is sent:
 
 <p align="center">
-  <img src="assets/ecpk/ecpk-phone-1-order.webp" alt="A customer orders a bulky-waste pickup: the saved place, the service, standard timing, a note, request sent, then the tracker" width="44%">
+  <img src="assets/ecpk/ecpk-1-order.webp" alt="A customer orders a bulky-waste pickup: the saved place, the service, standard timing, a note, request sent, then the tracker" width="100%">
 </p>
 
 | | |
@@ -180,16 +173,12 @@ Built for a Swiss field-service company, then opened up so any service company c
   <img src="assets/ecpk/ecpk-2-on-the-way.webp" alt="The customer's order page live: team assigned, time set, the van driving the route with its ETA, work in progress, completed, five stars" width="100%">
 </p>
 
-**The operator's side** — the request taken from the queue, a time set, on the way, arrived:
+**The operator's side** — on the phone, the request taken from the queue, a time set, on the way, arrived; on the tablet, the report written on site and the job completed, the invoice left as a draft:
 
 <p align="center">
-  <img src="assets/ecpk/ecpk-phone-3-driver-go.webp" alt="The operator takes the request from the queue, sets the time, sets off and arrives" width="44%">
-</p>
-
-**The report, and the job closed** — what was done, written on site, then completed; the invoice waits as a draft:
-
-<p align="center">
-  <img src="assets/ecpk/ecpk-tablet-4-driver-report.webp" alt="The operator writes the report on site, saves it and completes the job" width="62%">
+  <img src="assets/ecpk/ecpk-phone-3-driver-go.webp" alt="The operator takes the request from the queue, sets the time, sets off and arrives" width="42%">
+  &nbsp;
+  <img src="assets/ecpk/ecpk-tablet-4-driver-report.webp" alt="The operator writes the report on site, saves it and completes the job" width="47%">
 </p>
 
 **The bill** — the office adds a disposal fee to the draft the job left, the invoice and its Swiss QR-bill redraw, and it goes out:
