@@ -43,14 +43,14 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 
 | | Domain | What it runs on |
 |---|---|---|
-| [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
-| [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
-| [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
 | [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
 
 **One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
 
-### BBGI-OPS — the operational engine
+### <img src="assets/logos/bbgi.png" alt="" width="30" align="top"> BBGI-OPS — the operational engine
 
 **Structured execution, ownership, proof and live risk for work that happens across many sites.**
 
@@ -86,7 +86,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
   <img src="assets/bbgi-ops/bbgi-phone-tour.webp" alt="On a phone: the issues list, a member's role, qualified posts and certifications, and the evidence of a completed fire-door audit" width="44%">
 </p>
 
-### MDXT-OPS — the engine applied to care
+### <img src="assets/logos/mdxt.png" alt="" width="30" align="top"> MDXT-OPS — the engine applied to care
 
 **Patient-centred care for nursing homes and home-care services, where every read of a record is logged.**
 
@@ -133,7 +133,7 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
   <img src="assets/mdxt-ops/mdxt-tour.webp" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
 </p>
 
-### ECPK — field services and buildings, opened up as a multi-provider platform
+### <img src="assets/logos/ecpk.png" alt="" width="30" align="top"> ECPK — field services and buildings, opened up as a multi-provider platform
 
 **The whole life of a service job on one record: the request, the van on the map, the signed report, the paid invoice.**
 
