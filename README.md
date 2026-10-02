@@ -141,7 +141,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 Structures, locations, wards, rooms and beds, the people who work there and the patients they look after — with the patient kept at the centre: who is involved, what was done, what is planned, and what changed. Screens follow the system theme: light or dark.
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/cockpit-dark.png"><img src="assets/mdxt-ops/cockpit.png" alt="The shift cockpit: duties with steps, co-signatures and risk" width="100%"></picture>
+  <img src="assets/mdxt-ops/mdxt-cockpit-duty.gif" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
 </p>
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-cockpit-dark.png"><img src="assets/mdxt-ops/phone-cockpit.png" alt="The cockpit on a phone" width="24%"></picture>
@@ -156,6 +156,18 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **Staffing** — recurring shift templates published into a rota, a temp market with availability matching and offers, absences, contracts and hours balances, working-time and rest rules enforced.
 - **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
 - **Billing** — completed care becomes billable items split between insurer, public payer and client, then bills with the Swiss QR-bill, payments and reminders.
+
+**On shift, together** — the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it, and raises a response:
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-cockpit-team.gif" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="100%">
+</p>
+
+**Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-tour.gif" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
+</p>
 
 <table>
 <tr><td width="50%" valign="top"><b>The structure's day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/home-dark.png"><img src="assets/mdxt-ops/home.png" alt="The structure's day: open shifts and a temp nurse's applications"></picture></td><td width="50%" valign="top"><b>The patient record</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/dossier-dark.png"><img src="assets/mdxt-ops/dossier.png" alt="A patient record with problems, ICD codes, medication and goals"></picture></td></tr>
