@@ -61,14 +61,14 @@ Built for a Swiss field-service company, then opened up so any service company c
 
 `131 data models` · `57 API routers` · `4 languages` · `realtime everywhere`
 
+**A customer orders** — a bulky-waste pickup from the storefront: the place, the service, when, a note, and the request is sent:
+
 <p align="center">
-  <img src="assets/ecpk/order-enroute.png" alt="An order on its way: the tracker, the van on the road and its route to the door" width="100%">
+  <img src="assets/ecpk/ecpk-1-order.webp" alt="A customer orders a bulky-waste pickup: the saved place, the service, standard timing, a note, request sent, then the tracker" width="100%">
 </p>
 <p align="center">
-  <img src="assets/ecpk/phone-order-enroute.png" alt="The order on a phone, the van on its way" width="24%">
-  <img src="assets/ecpk/phone-team-map.png" alt="The crew on the map, on a phone" width="24%">
-  <img src="assets/ecpk/phone-today.png" alt="The operator's day on a phone" width="24%">
-  <img src="assets/ecpk/phone-storefront-service.png" alt="A provider's storefront on a phone" width="24%">
+  <img src="assets/ecpk/ecpk-tablet-1-order.webp" alt="The order on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-1-order.webp" alt="The order on a phone" width="46%">
 </p>
 
 | | |
@@ -83,26 +83,57 @@ Built for a Swiss field-service company, then opened up so any service company c
 | **Trust** | Passkeys and 2FA · fail-closed permissions · one-role-per-company · three audit streams · a double tap never files twice |
 | **AI** | Claude translates the catalogue and invoices into four languages and drafts invoice wording from the facts — never the numbers |
 
-<table>
-<tr><td width="50%" valign="top"><b>The crew and the vans, live</b><br><img src="assets/ecpk/team-map.png" alt="Team map: operators at their positions, free vans at their bases"></td><td width="50%" valign="top"><b>The dispatcher's day</b><br><img src="assets/ecpk/today.png" alt="The day page: what needs someone, the day's figures, the crew on the map"></td></tr>
-<tr><td width="50%" valign="top"><b>The on-site report</b><br><img src="assets/ecpk/order-report.png" alt="On-site report: lines, parts, readings, photos and time beside the printed report"></td><td width="50%" valign="top"><b>Signed by the customer</b><br><img src="assets/ecpk/order-report-signed.png" alt="The customer signing the report"></td></tr>
-<tr><td width="50%" valign="top"><b>Chat on the order</b><br><img src="assets/ecpk/order-chat.png" alt="Customer and team chat on an order, with read ticks"></td><td width="50%" valign="top"><b>The order's history</b><br><img src="assets/ecpk/order-history.png" alt="Every moment of an order"></td></tr>
-<tr><td width="50%" valign="top"><b>Closed, rated, paid</b><br><img src="assets/ecpk/order-closed.png" alt="A closed order with its rating, report and paid invoice"></td><td width="50%" valign="top"><b>Invoice register</b><br><img src="assets/ecpk/billing-register.png" alt="Invoice register with drafts, reminders and paid bills"></td></tr>
-<tr><td width="50%" valign="top"><b>Invoice with Swiss QR-bill</b><br><img src="assets/ecpk/invoice-qr.png" alt="An invoice with its Swiss QR-bill"></td><td width="50%" valign="top"><b>Billing trends</b><br><img src="assets/ecpk/billing-stats.png" alt="Billing trends: invoiced vs collected, overdue, days to get paid"></td></tr>
-<tr><td width="50%" valign="top"><b>A provider's storefront</b><br><img src="assets/ecpk/storefront.png" alt="A provider's public catalogue"></td><td width="50%" valign="top"><b>Loading</b><br><img src="assets/ecpk/loading.png" alt="The Ecopick loading screen"></td></tr>
-</table>
-
-
-**Each provider dresses its own storefront** — logo, colours, home sections and a photo per page and per order stage, edited with a live preview. Below, an invented plumber running on the same engine:
+**On the way, live** — the customer's tracker while the operator takes the job, sets the time and drives: the van on the road, the ETA, on site, done, rated:
 
 <p align="center">
-  <img src="assets/ecpk/provider-storefront.png" alt="An invented provider's public storefront, in its own colours" width="73%">
-  <img src="assets/ecpk/phone-provider-storefront.png" alt="The same storefront on a phone" width="24%">
+  <img src="assets/ecpk/ecpk-2-on-the-way.webp" alt="The customer's order page live: team assigned, time set, the van driving the route with its ETA, work in progress, completed, five stars" width="100%">
 </p>
-<table>
-<tr><td width="50%" valign="top"><b>Brand, with a live preview</b><br><img src="assets/ecpk/storefront-editor-brand.png" alt="Storefront editor: logo, colours and a live preview"></td><td width="50%" valign="top"><b>A photo per order stage</b><br><img src="assets/ecpk/storefront-editor-order-photos.png" alt="Storefront editor: one photo per tracker stage"></td></tr>
-<tr><td width="50%" valign="top"><b>Changing an image</b><br><img src="assets/ecpk/storefront-editor-photo-picker.png" alt="The media library open to pick a new image"></td><td width="50%" valign="top"><b>The provider's own sign-in</b><br><img src="assets/ecpk/provider-login.png" alt="A provider's branded sign-in page with its photo"></td></tr>
-</table>
+<p align="center">
+  <img src="assets/ecpk/ecpk-tablet-2-on-the-way.webp" alt="The tracker on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-2-on-the-way.webp" alt="The tracker on a phone" width="46%">
+</p>
+
+**The operator's side** — the request taken from the queue, a time set, on the way, arrived:
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-3-driver-go.webp" alt="The operator takes the request from the queue, sets the time, sets off and arrives" width="100%">
+</p>
+<p align="center">
+  <img src="assets/ecpk/ecpk-tablet-3-driver-go.webp" alt="The operator on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-3-driver-go.webp" alt="The operator on a phone" width="46%">
+</p>
+
+**The report, and the job closed** — what was done, written on site, then completed; the invoice waits as a draft:
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-4-driver-report.webp" alt="The operator writes the report on site, saves it and completes the job" width="100%">
+</p>
+<p align="center">
+  <img src="assets/ecpk/ecpk-tablet-4-driver-report.webp" alt="The report on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-4-driver-report.webp" alt="The report on a phone" width="46%">
+</p>
+
+**The bill** — the office adds a disposal fee to the draft the job left, the invoice and its Swiss QR-bill redraw, and it goes out:
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-5-bill.webp" alt="The draft invoice edited: a disposal fee added, the invoice and QR-bill redrawn to CHF 140, then sent" width="100%">
+</p>
+<p align="center">
+  <img src="assets/ecpk/ecpk-tablet-5-bill.webp" alt="The bill on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-5-bill.webp" alt="The bill on a phone" width="46%">
+</p>
+
+**The team** — an urgent job nobody had taken goes to the nearest operator, who accepts from their phone; then the crew live on the map:
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-6-team.webp" alt="The dispatcher assigns an urgent job from the crew list, the operator accepts, then the team on the live map with a van moving" width="100%">
+</p>
+<p align="center">
+  <img src="assets/ecpk/ecpk-tablet-6-team.webp" alt="The team on a tablet" width="52%">
+  <img src="assets/ecpk/ecpk-phone-6-team.webp" alt="The team on a phone" width="46%">
+</p>
+
+**Each provider dresses its own storefront** — logo, colours, home sections and a photo per page and per order stage, edited with a live preview, on a subdomain or its own domain.
 
 ### BBGI-OPS — the operational engine
 
