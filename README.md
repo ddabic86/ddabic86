@@ -143,12 +143,6 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-cockpit-duty.gif" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
 </p>
-<p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-cockpit-dark.png"><img src="assets/mdxt-ops/phone-cockpit.png" alt="The cockpit on a phone" width="24%"></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-home-dark.png"><img src="assets/mdxt-ops/phone-home.png" alt="The structure's day on a phone" width="24%"></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/phone-dossier-dark.png"><img src="assets/mdxt-ops/phone-dossier.png" alt="A patient record on a phone" width="24%"></picture>
-  <img src="assets/mdxt-ops/phone-loading.png" alt="Loading screen on a phone" width="24%">
-</p>
 
 - **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
 - **Access as a list, not a role** — consent per role, a per-record access list, invitations for family and outside professionals, and break-glass emergency access that is loud and logged.
@@ -168,12 +162,6 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-tour.gif" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
 </p>
-
-<table>
-<tr><td width="50%" valign="top"><b>The structure's day</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/home-dark.png"><img src="assets/mdxt-ops/home.png" alt="The structure's day: open shifts and a temp nurse's applications"></picture></td><td width="50%" valign="top"><b>The patient record</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/dossier-dark.png"><img src="assets/mdxt-ops/dossier.png" alt="A patient record with problems, ICD codes, medication and goals"></picture></td></tr>
-<tr><td width="50%" valign="top"><b>Care plan</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/care-plan-dark.png"><img src="assets/mdxt-ops/care-plan.png" alt="A care plan on the national catalogue and the week it produces"></picture></td><td width="50%" valign="top"><b>Month rota</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/schedule-dark.png"><img src="assets/mdxt-ops/schedule.png" alt="Month rota with shifts, open seats and planned hours"></picture></td></tr>
-<tr><td width="50%" valign="top"><b>The team</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/team-dark.png"><img src="assets/mdxt-ops/team.png" alt="The structure's people, their roles and a membership request"></picture></td><td width="50%" valign="top"><b>Billing</b><br><picture><source media="(prefers-color-scheme: dark)" srcset="assets/mdxt-ops/billing-dark.png"><img src="assets/mdxt-ops/billing.png" alt="Bills register with drafts, bills to collect and due dates"></picture></td></tr>
-</table>
 
 ### MiniPlatform — a subscription manager that costs nothing to run
 
