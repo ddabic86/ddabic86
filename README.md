@@ -56,8 +56,12 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 
 A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
 
+**The audit and the Command Center, on the phone** — on the left, a guard works an overdue fire-door audit door by door and flags a magnet; on the right, every office and duty on one live 0–100 risk index with its trend: an alarm pushes an office up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
+
 <p align="center">
   <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: a guard works the fire-door audit, ticking doors and reporting a magnet issue" width="44%">
+  &nbsp;
+  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="44%">
 </p>
 
 - **Space as a model** — organization → region → site → building → floor → zone → room, with typed assets (doors included) and checkpoints.
@@ -67,12 +71,6 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Alarms and issues** — alarms spawn response procedures; issues are collaborative tickets linked to the duty, step and asset they came from.
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
-
-**The Command Center** — every office and duty on one live 0–100 risk index with its trend: an alarm pushes an office up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
-
-<p align="center">
-  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="44%">
-</p>
 
 **Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
 
