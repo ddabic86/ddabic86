@@ -173,6 +173,14 @@ Built for a Swiss field-service company, then opened up so any service company c
   <img src="assets/ecpk/ecpk-2-on-the-way.webp" alt="The customer's order page live: team assigned, time set, the van driving the route with its ETA, work in progress, completed, five stars" width="100%">
 </p>
 
+**The same on the customer's phone** — the request sent, then the van on its way to the door:
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-phone-1-order.webp" alt="On a phone: the customer orders a bulky-waste pickup and the request is sent" width="44%">
+  &nbsp;
+  <img src="assets/ecpk/ecpk-phone-2-on-the-way.webp" alt="On a phone: the customer's order page as the team is assigned and the van drives to the door" width="44%">
+</p>
+
 **The operator's side** — on the phone, the request taken from the queue, a time set, on the way, arrived; on the tablet, the report written on site and the job completed, the invoice left as a draft:
 
 <p align="center">
