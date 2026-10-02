@@ -11,35 +11,75 @@
 
 </div>
 
----
+<p align="center">
+  <img src="assets/hero/hero.webp" alt="A montage of the three engines: BBGI-OPS's live risk board reordering, MDXT-OPS's cockpit ticking and signing a medication round, and ECPK's customer tracker following the van to the door" width="100%">
+</p>
 
-## What I build
-
-I build software for real-world operations.
-
-I build systems where people, places, entities, roles, permissions, schedules, approvals, records, evidence, risk, priority, business rules, AI support, and execution need to stay connected.
-
-The goal is simple:
-
-> **Turn fragmented real-world operations into live, structured, accountable systems.**
-
-A serious operational system should understand what happened, where it happened, who owns it, who can act on it, which entity it belongs to, what changed, what is blocked, what matters first, what risk exists, what needs approval, what needs proof, what needs history, and what should happen next.
-
-```txt
-real-world work → structure → ownership → execution → risk → priority → visibility → accountability
-```
-
-The interface is only the visible layer.
-
-The real product is the operating model underneath.
+<p align="center"><sub><b>BBGI-OPS</b> · <b>MDXT-OPS</b> · <b>ECPK</b> — three private platforms on one engine, each run locally on an invented world and driven for real.</sub></p>
 
 ---
 
 ## Private products
 
-Most of my serious repositories are private because they belong to commercial platforms, so this page shows them instead: each one running locally on an invented world, with the real interface.
+Most of my serious repositories are private because they belong to commercial platforms, so this page shows them running instead. They are not separate ideas: **BBGI-OPS** is the operational engine, **MDXT-OPS** and **ECPK** apply it to healthcare and to field services, and **MiniPlatform** takes its rules down to a single small business. The architecture is [further down](#under-the-hood).
 
-They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS** and **ECPK** apply the same engine to healthcare and to field services. **MiniPlatform** takes its rules down to a single small business that runs for free.
+### <img src="assets/logos/bbgi.png" alt="" width="30" align="top"> BBGI-OPS — the operational engine
+
+**Structured execution, ownership, proof and live risk for work that happens across many sites.**
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center: offices and duties ranked by a live 0–100 risk index, with their trends" width="100%">
+</p>
+
+<p align="center"><sub>The roster fills the night shift and refuses an unqualified guard · the Command Center ranks every office and duty by live risk.</sub></p>
+
+### <img src="assets/logos/mdxt.png" alt="" width="30" align="top"> MDXT-OPS — the engine applied to care
+
+**Patient-centred care for nursing homes and home-care services, where every read of a record is logged.**
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-tour.webp" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
+</p>
+
+<p align="center"><sub>A patient's dossier and care plan, the month's rota and the billing register.</sub></p>
+
+### <img src="assets/logos/ecpk.png" alt="" width="30" align="top"> ECPK — field services and buildings, opened up as a multi-provider platform
+
+**The whole life of a service job on one record: the request, the van on the map, the signed report, the paid invoice.**
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-2-on-the-way.webp" alt="The customer's order page live: team assigned, time set, the van driving the route with its ETA, work in progress, completed, five stars" width="100%">
+</p>
+
+<p align="center">
+  <img src="assets/ecpk/ecpk-team-map.webp" alt="The team view: who is working and where, the free vans and the crew on the live map" width="100%">
+</p>
+
+<p align="center"><sub>The customer's tracker while the operator drives to the door · the dispatcher's crew and free vans on the live map.</sub></p>
+
+### MiniPlatform — a subscription manager that costs nothing to run
+
+**The same rules at the smallest scale: one business, a handful of customers, no paid services.**
+
+<p align="center">
+  <img src="assets/miniplatform/mini-today.webp" alt="The overview: a WhatsApp reminder marked sent, then an expiring monthly renewed as quarterly with a students' discount, and the renewal message queued" width="64%">
+  &nbsp;
+  <img src="assets/miniplatform/mini-phone-welcome.webp" alt="A new customer opens the one-time link on a phone, checks the e-mail, sets a password and lands on their subscriptions" width="32%">
+</p>
+
+<p align="center"><sub>Left, the day's reminders sent and a renewal onto another plan · right, a new customer's one-time WhatsApp link on the phone.</sub></p>
+
+> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run locally on an invented world and driven for real to record them.
+
+---
+
+## Under the hood
+
+### One platform core
 
 | | Domain | What it runs on |
 |---|---|---|
@@ -50,9 +90,12 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 
 **One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
 
-### <img src="assets/logos/bbgi.png" alt="" width="30" align="top"> BBGI-OPS — the operational engine
+### Inside each product
 
-**Structured execution, ownership, proof and live risk for work that happens across many sites.**
+<details>
+<summary><img src="assets/logos/bbgi.png" alt="" width="22" align="top"> <b>BBGI-OPS</b> — space, procedures, staffing, the cockpit, risk and governance</summary>
+
+<br>
 
 A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
 
@@ -72,12 +115,6 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
-**Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
-
-<p align="center">
-  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
-</p>
-
 **On shift, together · around the engine** — left, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift. Right, around it: the issues as tickets, a member's role, qualified posts and certifications, and a completed duty opened to its evidence:
 
 <p align="center">
@@ -86,9 +123,12 @@ A generic engine for work that needs follow-through: who owns it, who may act on
   <img src="assets/bbgi-ops/bbgi-phone-tour.webp" alt="On a phone: the issues list, a member's role, qualified posts and certifications, and the evidence of a completed fire-door audit" width="44%">
 </p>
 
-### <img src="assets/logos/mdxt.png" alt="" width="30" align="top"> MDXT-OPS — the engine applied to care
+</details>
 
-**Patient-centred care for nursing homes and home-care services, where every read of a record is logged.**
+<details>
+<summary><img src="assets/logos/mdxt.png" alt="" width="22" align="top"> <b>MDXT-OPS</b> — the record, access, care plans, staffing, the shift market and billing</summary>
+
+<br>
 
 Structures, locations, wards, rooms and beds, the people who work there and the patients they look after — with the patient kept at the centre: who is involved, what was done, what is planned, and what changed. Screens follow the system theme: light or dark.
 
@@ -127,15 +167,12 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
   <img src="assets/mdxt-ops/mdxt-showcase-directory.webp" alt="The directory: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="100%">
 </p>
 
-**Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
+</details>
 
-<p align="center">
-  <img src="assets/mdxt-ops/mdxt-tour.webp" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
-</p>
+<details>
+<summary><img src="assets/logos/ecpk.png" alt="" width="22" align="top"> <b>ECPK</b> — orders, dispatch, on-site reports, Swiss billing and the marketplace</summary>
 
-### <img src="assets/logos/ecpk.png" alt="" width="30" align="top"> ECPK — field services and buildings, opened up as a multi-provider platform
-
-**The whole life of a service job on one record: the request, the van on the map, the signed report, the paid invoice.**
+<br>
 
 Built for a Swiss field-service company, then opened up so any service company can run its own branded storefront on the same engine. The place stays central: every job, cost and photo accumulates on the location itself, so the history outlives a change of tenant, team or provider.
 
@@ -158,12 +195,6 @@ Built for a Swiss field-service company, then opened up so any service company c
 | **Reach** | Bell → live toast → Web Push → e-mail, SMS, WhatsApp or Telegram, each opt-in and verified |
 | **Trust** | Passkeys and 2FA · fail-closed permissions · one-role-per-company · three audit streams · a double tap never files twice |
 | **AI** | Claude translates the catalogue and invoices into four languages and drafts invoice wording from the facts — never the numbers |
-
-**On the way, live** — the customer's tracker while the operator takes the job, sets the time and drives: the van on the road, the ETA, on site, done, rated:
-
-<p align="center">
-  <img src="assets/ecpk/ecpk-2-on-the-way.webp" alt="The customer's order page live: team assigned, time set, the van driving the route with its ETA, work in progress, completed, five stars" width="100%">
-</p>
 
 **The operator's side** — on the phone, the request taken from the queue, a time set, on the way, arrived; on the tablet, the report written on site and the job completed, the invoice left as a draft:
 
@@ -191,17 +222,14 @@ Built for a Swiss field-service company, then opened up so any service company c
   <img src="assets/ecpk/ecpk-7-storefront.webp" alt="An invented plumber's storefront, then its owner in the editor: a new primary colour with a live preview, and a photo from the library for the order page's first stage" width="100%">
 </p>
 
-### MiniPlatform — a subscription manager that costs nothing to run
+</details>
 
-**The same rules at the smallest scale: one business, a handful of customers, no paid services.**
+<details>
+<summary><b>MiniPlatform</b> — subscriptions, reminders, billing and security without a provider</summary>
+
+<br>
 
 For an owner who tracks renewals in a spreadsheet and wants to stop — without paying for a SaaS, an e-mail provider or an SMS gateway. No Redis, no queue, no object storage: Postgres and a daily job. Italian by default, English included.
-
-**The day's messages** — reminders prepared by the daily job, sent on WhatsApp and marked; a subscription about to end renewed onto another plan with a promotion, and the thank-you message queued:
-
-<p align="center">
-  <img src="assets/miniplatform/mini-today.webp" alt="The overview: a WhatsApp reminder marked sent, then an expiring monthly renewed as quarterly with a students' discount, and the renewal message queued" width="100%">
-</p>
 
 - **One book for people and their subscriptions** — renewals, pauses, promotions; access handed over by a one-time WhatsApp link with a step-by-step first sign-in.
 - **Reminders that never go twice** — a daily job prepares them before a subscription ends, idempotently; sent on WhatsApp by hand or through the Cloud API, or on Telegram.
@@ -209,15 +237,37 @@ For an owner who tracks renewals in a spreadsheet and wants to stop — without 
 - **Security without a provider** — e-mail and password done carefully, Postgres-backed rate limits, a security console with blocks and the activity log, and roles with a permissions matrix.
 - **Tested** — Vitest for the money and dates, Playwright end-to-end on GitHub Actions; deployable for free on Vercel and Neon.
 
-**An overdue bill · a new customer's first link** — left, the register's "to sort out", the invoice with its Swiss QR-bill, and the payment recorded. Right, on the customer's phone, the one-time link the studio sends on WhatsApp: check the e-mail, make a password, and the customer's own area:
+**An overdue bill** — the register's "to sort out", the invoice with its Swiss QR-bill, and the payment recorded:
 
 <p align="center">
-  <img src="assets/miniplatform/mini-bill.webp" alt="An overdue invoice opened to its paper with the QR-bill, then a TWINT payment recorded and the invoice turning into a receipt" width="64%">
-  &nbsp;
-  <img src="assets/miniplatform/mini-phone-welcome.webp" alt="A new customer opens the one-time link on a phone, checks the e-mail, sets a password and lands on their subscriptions" width="32%">
+  <img src="assets/miniplatform/mini-bill.webp" alt="An overdue invoice opened to its paper with the QR-bill, then a TWINT payment recorded and the invoice turning into a receipt" width="100%">
 </p>
 
-> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run locally on an invented world and driven for real to record them.
+</details>
+
+---
+
+## What I build
+
+## What I build
+
+I build software for real-world operations.
+
+I build systems where people, places, entities, roles, permissions, schedules, approvals, records, evidence, risk, priority, business rules, AI support, and execution need to stay connected.
+
+The goal is simple:
+
+> **Turn fragmented real-world operations into live, structured, accountable systems.**
+
+A serious operational system should understand what happened, where it happened, who owns it, who can act on it, which entity it belongs to, what changed, what is blocked, what matters first, what risk exists, what needs approval, what needs proof, what needs history, and what should happen next.
+
+```txt
+real-world work → structure → ownership → execution → risk → priority → visibility → accountability
+```
+
+The interface is only the visible layer.
+
+The real product is the operating model underneath.
 
 ---
 
