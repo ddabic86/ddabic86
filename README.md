@@ -141,7 +141,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 Structures, locations, wards, rooms and beds, the people who work there and the patients they look after — with the patient kept at the centre: who is involved, what was done, what is planned, and what changed. Screens follow the system theme: light or dark.
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-cockpit-duty.gif" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
+  <img src="assets/mdxt-ops/mdxt-cockpit-duty.webp" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
 </p>
 
 - **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
@@ -154,13 +154,13 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 **On shift, together** — the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it, and raises a response:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-cockpit-team.gif" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="100%">
+  <img src="assets/mdxt-ops/mdxt-cockpit-team.webp" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="100%">
 </p>
 
 **Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
 
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-tour.gif" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
+  <img src="assets/mdxt-ops/mdxt-tour.webp" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
 </p>
 
 ### MiniPlatform — a subscription manager that costs nothing to run
