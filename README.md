@@ -43,9 +43,9 @@ They are not separate ideas. **BBGI-OPS** is the operational engine. **MDXT-OPS*
 
 | | Domain | What it runs on |
 |---|---|---|
-| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
-| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
-| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#-bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#-mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
+| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#-ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude |
 | [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
 
 **One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
