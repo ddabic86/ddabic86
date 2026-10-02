@@ -249,8 +249,6 @@ For an owner who tracks renewals in a spreadsheet and wants to stop — without 
 
 ## What I build
 
-## What I build
-
 I build software for real-world operations.
 
 I build systems where people, places, entities, roles, permissions, schedules, approvals, records, evidence, risk, priority, business rules, AI support, and execution need to stay connected.
