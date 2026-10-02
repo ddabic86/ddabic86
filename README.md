@@ -143,6 +143,10 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-cockpit-duty.webp" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
 </p>
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-tablet-cockpit-duty.webp" alt="The duty on a tablet" width="52%">
+  <img src="assets/mdxt-ops/mdxt-phone-cockpit-duty.webp" alt="The duty on a phone" width="46%">
+</p>
 
 - **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
 - **Access as a list, not a role** — consent per role, a per-record access list, invitations for family and outside professionals, and break-glass emergency access that is loud and logged.
@@ -156,11 +160,19 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-cockpit-team.webp" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="100%">
 </p>
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-tablet-cockpit-team.webp" alt="The team on shift on a tablet" width="52%">
+  <img src="assets/mdxt-ops/mdxt-phone-cockpit-team.webp" alt="The team on shift on a phone" width="46%">
+</p>
 
 **Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
 
 <p align="center">
   <img src="assets/mdxt-ops/mdxt-tour.webp" alt="A tour: the patient record, the care plan, the month rota and the bills register" width="100%">
+</p>
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-tablet-tour.webp" alt="The tour on a tablet" width="52%">
+  <img src="assets/mdxt-ops/mdxt-phone-tour.webp" alt="The tour on a phone" width="46%">
 </p>
 
 ### MiniPlatform — a subscription manager that costs nothing to run
