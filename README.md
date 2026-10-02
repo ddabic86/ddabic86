@@ -98,8 +98,12 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 
 **Not built for one country.** The country is a setting: it decides the coding system for problems, the assessment instrument, the tariff scheme, the payers and the regions people work in. Switzerland is the first one configured; another country is new reference data, not a new product.
 
+**On shift · on the road, on the phone** — left, a nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, and a colleague co-signs. Right, a home-care round: the nurse raises the leg to the next client from the round itself, the phone's GPS draws the drive on the map, and the distance and time are sealed into the record when she signs it off:
+
 <p align="center">
-  <img src="assets/mdxt-ops/mdxt-cockpit-duty.webp" alt="A nurse works a duty in the live cockpit: starts it, ticks each step as its risk drops, signs, a colleague co-signs, and it completes" width="100%">
+  <img src="assets/mdxt-ops/mdxt-phone-cockpit-duty.webp" alt="On a phone: a nurse starts a duty, ticks each step as its risk drops, signs, and a colleague co-signs" width="44%">
+  &nbsp;
+  <img src="assets/mdxt-ops/mdxt-phone-travel.webp" alt="On a phone: a home-care nurse raises a travel leg to her next client, drives it with the GPS track drawn live on the map, and signs it off" width="44%">
 </p>
 
 - **The record** — patient and episode kept apart: problems with ICD codes, medication, allergies, vaccinations, observations, documents and a journal.
@@ -112,12 +116,6 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
 - **Live, and on the road** — the engine's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
 - **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
-
-**On the road** — a home-care round: the nurse raises the leg to the next client from the round itself, the phone's GPS draws the drive on the map, and the distance and time are sealed into the record when she signs it off:
-
-<p align="center">
-  <img src="assets/mdxt-ops/mdxt-travel.webp" alt="A home-care nurse raises a travel leg to her next client, drives it with the GPS track drawn live on the map, signs it at 3.9 km and starts the visit" width="100%">
-</p>
 
 **On shift, together · at the client's door** — left, the roster shows who is busy and who is free; a nurse joins a colleague's round, takes a duty from the pool, completes it and raises a response. Right, the performances inside a home visit, each in the structure's own version of the national catalogue: started, every step ticked, signed — the day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
 
