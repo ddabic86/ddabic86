@@ -124,6 +124,30 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
   <img src="assets/mdxt-ops/mdxt-phone-cockpit-team.webp" alt="The cockpit's roster, joining a colleague's round, taking a pooled duty, completing it and raising a fall response" width="44%">
 </p>
 
+**On the road** — a home-care round: the nurse raises the leg to the next client from the round itself, the phone's GPS draws the drive on the map, and the distance and time are sealed into the record when she signs it off:
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-phone-travel.webp" alt="A home-care nurse raises a travel leg to her next client, drives it with the GPS track drawn live on the map, signs it at 3.9 km and starts the visit" width="44%">
+</p>
+
+**At the client's door** — the performances inside the visit, each in the structure's own version of the national catalogue: started, every step ticked, signed. The day's billable lines fill in, and the visit closes only once nothing inside it is still owed:
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-visit-performances.webp" alt="At the client's home: medication and help with undressing are started, ticked and signed from the client's panel, the billable lines fill in, and the visit is signed off" width="100%">
+</p>
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-phone-visit-performances.webp" alt="The same visit on a phone" width="44%">
+</p>
+
+**People and structures, each with a page** — the directory of practitioners who put their page on show, narrowed to home care; a nurse's page with her credentials and their expiry, her CV, languages and availability; then the structures, and a care home's page with its visiting hours, fields of care and authorisations:
+
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-showcase-directory.webp" alt="The directory: people narrowed to home care, a nurse's full profile, then the structures and a care home's page" width="100%">
+</p>
+<p align="center">
+  <img src="assets/mdxt-ops/mdxt-phone-showcase-directory.webp" alt="The same directory on a phone" width="44%">
+</p>
+
 **Around the record** — a patient's dossier and care plan, the month's rota and the billing register:
 
 <p align="center">
