@@ -72,18 +72,18 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
-**Schedule and coverage · on shift, together** — left, the night shift on the planner's phone: the roster suggests who to put in the open seat, refuses someone not qualified for the post, and coverage fills. Right, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift:
+**Schedule and coverage** — the day plan with its shifts, seats and operations; the roster suggests who to put in a seat, refuses someone not qualified for the post, and coverage fills:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-phone-schedule.webp" alt="On a phone: the night shift's open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage filling" width="44%">
-  &nbsp;
-  <img src="assets/bbgi-ops/bbgi-phone-cockpit-team.webp" alt="The roster, a door-held alarm holding other work, joining and closing the response, and the handover at check-out" width="44%">
+  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
 </p>
 
-**Around the engine** — a site, an issue ticket as a thread of updates, a membership's role and permission matrix, and a completed duty opened to its evidence:
+**On shift, together · around the engine** — left, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift. Right, around it: the issues as tickets, a member's role, qualified posts and certifications, and a completed duty opened to its evidence:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-tour.webp" alt="A tour: a site, an issue ticket, a role and permission matrix, and the evidence of a completed fire-door audit with both signatures" width="100%">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-team.webp" alt="The roster, a door-held alarm holding other work, joining and closing the response, and the handover at check-out" width="44%">
+  &nbsp;
+  <img src="assets/bbgi-ops/bbgi-phone-tour.webp" alt="On a phone: the issues list, a member's role, qualified posts and certifications, and the evidence of a completed fire-door audit" width="44%">
 </p>
 
 ### MDXT-OPS — the engine applied to care
