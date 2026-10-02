@@ -115,6 +115,14 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 
+**Answers that spawn the next work** — left, the fire-door audit's magnet test answered *Fail*: once it is signed, a door repair check and a fire-watch round land on the same shift, each linked back to the audit; the repair check comes back *Not fixed*, and that answer spawns an incident report in turn. Right, a door-held response whose last answer is the cause — *Forced entry* closes the alarm as real, and signing it puts an incident report and a lockdown round on the shift:
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-phone-spawn-duty.webp" alt="On a phone: the fire-door audit's magnet test answered Fail, the audit signed, a door repair check and a fire-watch round appear linked to it; the repair check answered Not fixed spawns an incident report" width="44%">
+  &nbsp;
+  <img src="assets/bbgi-ops/bbgi-phone-spawn-response.webp" alt="On a phone: a door-held response raised from the cockpit, its last step Cause answered Forced entry, the alarm closed, and an incident report and a lockdown round spawned on the shift" width="44%">
+</p>
+
 **On shift, together · around the engine** — left, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift. Right, around it: the issues as tickets, a member's role, qualified posts and certifications, and a completed duty opened to its evidence:
 
 <p align="center">
