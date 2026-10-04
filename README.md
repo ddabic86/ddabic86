@@ -83,14 +83,14 @@ Most of my serious repositories are private because they belong to commercial pl
 
 | | Domain | What it runs on |
 |---|---|---|
-| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#-bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude (PDF import) |
-| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#-mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude (translation, bill wording) |
-| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#-ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · Claude (translation, invoice wording) |
+| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#-bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
+| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#-mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
+| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#-ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
 | [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
 
 **One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
 
-**Where Claude fits.** AI is used only where it saves people typing, never where it decides: BBGI-OPS reads an uploaded roster PDF into shifts matched to existing staff, and a site manual into a structured document; MDXT-OPS and ECPK translate their catalogues into the other languages staff and clients read, and draft the wording of a bill from its facts. It never writes a number, a drafted bill text is only kept once a person saves it, translations are stored marked as machine-made so a person can correct them, and without a key each feature falls back to plain input. In MDXT-OPS the model only ever sees care labels and the billing period — never a diagnosis, the record or a carer's note.
+**The AI layer.** AI is used only where it saves people typing, never where it decides: BBGI-OPS reads an uploaded roster PDF into shifts matched to existing staff, and a site manual into a structured document; MDXT-OPS and ECPK translate their catalogues into the other languages staff and clients read, and draft the wording of a bill from its facts. It never writes a number, a drafted bill text is only kept once a person saves it, translations are stored marked as machine-made so a person can correct them, and without a key each feature falls back to plain input. In MDXT-OPS the model only ever sees care labels and the billing period — never a diagnosis, the record or a carer's note.
 
 ### Inside each product
 
@@ -116,7 +116,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 - **Alarms and issues** — alarms spawn response procedures; issues are collaborative tickets linked to the duty, step and asset they came from.
 - **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
 - **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
-- **AI that saves typing** — Claude turns an uploaded roster PDF into shifts matched to the people already on file, and a site manual into a structured document; without it, the manual falls back to plain text extraction.
+- **AI that saves typing** — the AI layer turns an uploaded roster PDF into shifts matched to the people already on file, and a site manual into a structured document; without it, the manual falls back to plain text extraction.
 
 **Answers that spawn the next work** — left, the fire-door audit's magnet test answered *Fail*: once it is signed, a door repair check and a fire-watch round land on the same shift, each linked back to the audit; the repair check comes back *Not fixed*, and that answer spawns an incident report in turn. Right, a door-held response whose last answer is the cause — *Forced entry* closes the alarm as real, and signing it puts an incident report and a lockdown round on the shift:
 
@@ -163,7 +163,7 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
 - **Live, and on the road** — the engine's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
 - **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
-- **AI, kept outside the record** — Claude drafts translations of the care catalogue (saved as machine rows a person can correct) and the wording of a bill. It is given the care's labels and the period, never a diagnosis, the record or a carer's note, and it never writes a number.
+- **AI, kept outside the record** — the AI layer drafts translations of the care catalogue (saved as machine rows a person can correct) and the wording of a bill. It is given the care's labels and the period, never a diagnosis, the record or a carer's note, and it never writes a number.
 
 **Answers that open the next work** — left, the vital-signs round's last step answered *Fever*: a fever protocol and a fluids and comfort round open on the shift the moment it is saved; the fever protocol comes back *Still high*, and that answer opens a doctor's visit in turn. Right, a fall response raised from the cockpit, whose last answer is the injury — *Head injury* opens neuro observations and family informed on the same shift. The rules live on each step ("Completing it opens" in the step editor):
 
@@ -214,7 +214,7 @@ Built for a Swiss field-service company, then opened up so any service company c
 | **Marketplace** | Each provider gets a storefront on a subdomain or its own domain, with its brand, catalogue and plans · platform packages, limits and fees |
 | **Reach** | Bell → live toast → Web Push → e-mail, SMS, WhatsApp or Telegram, each opt-in and verified |
 | **Trust** | Passkeys and 2FA · fail-closed permissions · one-role-per-company · three audit streams · a double tap never files twice |
-| **AI** | Claude translates the catalogue and invoices into four languages and drafts invoice wording from the facts — never the numbers |
+| **AI layer** | Translates the catalogue and invoices into four languages and drafts invoice wording from the facts — never the numbers |
 
 **The operator's side** — on the phone, the request taken from the queue, a time set, on the way, arrived; on the tablet, the report written on site and the job completed, the invoice left as a draft:
 
