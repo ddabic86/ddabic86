@@ -44,11 +44,7 @@
   <img src="assets/pxnt/pxnt-engine.webp" alt="The AVGVSTVS page on pxnt.app: the rota, procedures, a task step by step, live risk, answers that open the next work, resources, issues, the handover, manuals, chat and following people, each drawing drawing itself in" width="100%">
 </p>
 
-<p align="center">
-  <img src="assets/pxnt/pxnt-demo.webp" alt="The live demo on pxnt.app: the cockpit's midday round worked step by step — a gauge reading, a stock count, a door check — the task's risk falling from 23 to 0, signed and countersigned" width="100%">
-</p>
-
-<p align="center"><sub>The engine on pxnt.app · its live demo, running in the browser: a round worked step by step while its risk falls to zero, then signed and countersigned.</sub></p>
+<p align="center"><sub>The engine on pxnt.app: every part of the work, drawing itself in.</sub></p>
 
 ### MERCVRIVS — the orchestrator of service networks
 
@@ -85,14 +81,6 @@
 | **Billing and documents** | Billable items from verified work, invoices, reminders, payments and PDF documents |
 | **AI assist** | Extraction from rosters, PDFs and manuals, drafts and translation — AI prepares, people decide |
 | **Console** | One shared platform, distinct organizations: each keeps its own brand, its own data and its own rules |
-
-**On the phone** — left, pxnt.app drawing itself in; right, the live demo's round worked on a phone:
-
-<p align="center">
-  <img src="assets/pxnt/pxnt-phone-home.webp" alt="On a phone: pxnt.app's home page, the platform drawing itself in with AVGVSTVS and MERCVRIVS inside it" width="44%">
-  &nbsp;
-  <img src="assets/pxnt/pxnt-phone-demo.webp" alt="On a phone: the live demo's midday round worked step by step, its risk falling to zero, then signed" width="44%">
-</p>
 
 ---
 
@@ -150,7 +138,7 @@
 
 <p align="center"><sub>Left, the day's reminders sent and a renewal onto another plan · right, a new customer's one-time WhatsApp link on the phone.</sub></p>
 
-> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run on an invented world and driven for real to record them, and pxnt.app's demo keeps its data in the browser.
+> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run on an invented world and driven for real to record them.
 
 ---
 
