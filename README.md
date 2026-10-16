@@ -12,32 +12,74 @@
 </div>
 
 <p align="center">
-  <img src="assets/hero/hero.webp" alt="A montage of the three engines: BBGI-OPS's cockpit, a guard ticking a fire-door audit, then the live risk board; MDXT-OPS's cockpit signing a medication round, then a home-care leg drawn on the map; ECPK's customer ordering a pickup, then the van followed to the door" width="100%">
+  <img src="assets/pxnt/pxnt-home.webp" alt="pxnt.app: the platform drawing itself in with AVGVSTVS and MERCVRIVS inside it, the shared services under every product, the products, and the map of everything connected" width="100%">
 </p>
 
-<p align="center"><sub><b>BBGI-OPS</b> · <b>MDXT-OPS</b> · <b>ECPK</b> — three private platforms on one engine, each run locally on an invented world and driven for real.</sub></p>
+<p align="center"><sub><b>PXNT</b> — one platform built once, one engine (<b>AVGVSTVS</b>) and one service network (<b>MERCVRIVS</b>). <b>MDXT</b>, <b>BBGI</b> and <b>ECPK</b> are built on it. · <a href="https://pxnt.app">pxnt.app</a></sub></p>
 
 ---
 
-## Private products
+## <img src="assets/logos/pxnt.png" alt="" width="30" align="top"> PXNT — the technology
 
-Most of my serious repositories are private because they belong to commercial platforms, so this page shows them running instead. They are not separate ideas: **BBGI-OPS** is the operational engine, **MDXT-OPS** and **ECPK** apply it to healthcare and to field services, and **MiniPlatform** takes its rules down to a single small business. The architecture is [further down](#under-the-hood).
+My products started as copies of each other, and copies drift: a sign-in fix made in one never reached the others. PXNT ends that. Everything a product needs is written once, in one private repository, and each product installs it. **Code is shared, data never is**: every product keeps its own database, its own brand and its own users.
 
-### <img src="assets/logos/bbgi.png" alt="" width="30" align="top"> BBGI-OPS — the operational engine
+It has three parts.
 
-**Structured execution, ownership, proof and live risk for work that happens across many sites.**
+**The platform, built once.** Sign-in with passkeys and two-factor, sessions and devices, rate limits and blocks; organizations, members and roles each organization can extend, invitations; the account — profile, photo, notification choices, push devices, data export and account deletion; notifications on the bell, by push and by mail, each kept until it is delivered; live updates on one socket per page; the audit, PDFs, scheduled jobs, the AI layer; and one shared interface kit that every product draws in its own look.
+
+### AVGVSTVS — the engine
+
+**The daily work: who works where, every task step by step, live risk, problems and alerts, the handover.** Every change goes through one door and is audited in the same transaction; an AI may propose, only a person decides. MDXT and BBGI are built on it.
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-schedule.webp" alt="The night shift: assigning the open Control Room seat, an unqualified pick refused, the suggested guard assigned and coverage turning green" width="100%">
+  <img src="assets/pxnt/pxnt-engine.webp" alt="The AVGVSTVS page on pxnt.app: the rota, procedures, a task step by step, live risk, answers that open the next work, resources, issues, the handover, manuals, chat and following people, each drawing drawing itself in" width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center: offices and duties ranked by a live 0–100 risk index, with their trends" width="100%">
+  <img src="assets/pxnt/pxnt-demo.webp" alt="The live demo on pxnt.app: the cockpit's midday round worked step by step — a gauge reading, a stock count, a door check — the task's risk falling from 23 to 0, signed and countersigned" width="100%">
 </p>
 
-<p align="center"><sub>The roster fills the night shift and refuses an unqualified guard · the Command Center ranks every office and duty by live risk.</sub></p>
+<p align="center"><sub>The engine's page on pxnt.app · its live demo, which runs in the browser: a round worked step by step while its risk falls to zero, then signed and countersigned.</sub></p>
 
-### <img src="assets/logos/mdxt.png" alt="" width="30" align="top"> MDXT-OPS — the engine applied to care
+**On the phone** — left, pxnt.app's home page drawing itself in; right, the same demo round worked on a phone:
+
+<p align="center">
+  <img src="assets/pxnt/pxnt-phone-home.webp" alt="On a phone: pxnt.app's home page, the platform drawing itself in with AVGVSTVS and MERCVRIVS inside it" width="44%">
+  &nbsp;
+  <img src="assets/pxnt/pxnt-phone-demo.webp" alt="On a phone: the live demo's midday round worked step by step, its risk falling to zero, then signed" width="44%">
+</p>
+
+### MERCVRIVS — the service network
+
+**What a customer and a provider agree, see and sign: the storefront, the request, the offer, who is sent, the visit, the signed proof and the bill.** How an organization runs its own people stays the engine's. ECPK is built on it.
+
+<p align="center">
+  <img src="assets/pxnt/pxnt-network.webp" alt="The MERCVRIVS page on pxnt.app: independent service networks, people and capacity, relationships, routing by context, work in the field and many organizations at scale, each drawing drawing itself in" width="100%">
+</p>
+
+**On the phone** — left, the engine's page; right, the service network's:
+
+<p align="center">
+  <img src="assets/pxnt/pxnt-phone-engine.webp" alt="On a phone: the AVGVSTVS page with its drawings drawing in" width="44%">
+  &nbsp;
+  <img src="assets/pxnt/pxnt-phone-network.webp" alt="On a phone: the MERCVRIVS page with its drawings drawing in" width="44%">
+</p>
+
+**How the products stay in step.** Each product pins a version of the kernel and takes a new one on purpose; one command packs exactly the packages it needs, with nothing left behind; and an adoption board, checked against every product's real code, shows which part each product already runs on the kernel and fails when a product forgets to delete its own old copy. The products move onto it one area at a time: sign-in, accounts, mail, documents and jobs already run on the kernel in MDXT and ECPK.
+
+---
+
+## Built on PXNT
+
+| | For | Built on |
+|---|---|---|
+| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT**](#-mdxt--care-teams-on-avgvstvs) | Nursing homes and home care | AVGVSTVS · the platform |
+| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI**](#-bbgi--multi-site-operations-on-avgvstvs) | Multi-site operations, worldwide | AVGVSTVS · the platform |
+| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#-ecpk--field-services-and-buildings-on-mercvrivs) | Field services and buildings, many providers | MERCVRIVS · the platform |
+
+Most of these repositories are private because they belong to commercial products, so this page shows them running instead.
+
+### <img src="assets/logos/mdxt.png" alt="" width="30" align="top"> MDXT — care teams, on AVGVSTVS
 
 **Patient-centred care for nursing homes and home-care services, where every read of a record is logged.**
 
@@ -47,7 +89,17 @@ Most of my serious repositories are private because they belong to commercial pl
 
 <p align="center"><sub>A patient's dossier and care plan, the month's rota and the billing register.</sub></p>
 
-### <img src="assets/logos/ecpk.png" alt="" width="30" align="top"> ECPK — field services and buildings, opened up as a multi-provider platform
+### <img src="assets/logos/bbgi.png" alt="" width="30" align="top"> BBGI — multi-site operations, on AVGVSTVS
+
+**Every task, its risk and its signature across many sites, on one live board.**
+
+<p align="center">
+  <img src="assets/bbgi-ops/bbgi-command-center.webp" alt="The Command Center: sites and tasks ranked by a live 0–100 risk index, with their trends" width="100%">
+</p>
+
+<p align="center"><sub>The Command Center ranks every site and task by live risk, with its trend.</sub></p>
+
+### <img src="assets/logos/ecpk.png" alt="" width="30" align="top"> ECPK — field services and buildings, on MERCVRIVS
 
 **The whole life of a service job on one record: the request, the van on the map, the signed report, the paid invoice.**
 
@@ -63,7 +115,7 @@ Most of my serious repositories are private because they belong to commercial pl
 
 ### MiniPlatform — a subscription manager that costs nothing to run
 
-**The same rules at the smallest scale: one business, a handful of customers, no paid services.**
+**A separate project, not on PXNT: the same rules at the smallest scale — one business, a handful of customers, no paid services.**
 
 <p align="center">
   <img src="assets/miniplatform/mini-today.webp" alt="The overview: a WhatsApp reminder marked sent, then an expiring monthly renewed as quarterly with a students' discount, and the renewal message queued" width="64%">
@@ -73,63 +125,55 @@ Most of my serious repositories are private because they belong to commercial pl
 
 <p align="center"><sub>Left, the day's reminders sent and a renewal onto another plan · right, a new customer's one-time WhatsApp link on the phone.</sub></p>
 
-> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run locally on an invented world and driven for real to record them.
+> All names, addresses, e-mail addresses and phone numbers in the videos are made up; every product was run on an invented world and driven for real to record them, and pxnt.app's demo keeps its data in the browser.
 
 ---
 
 ## Under the hood
 
-### One platform core
+### The stack each product runs
 
 | | Domain | What it runs on |
 |---|---|---|
-| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> [**BBGI-OPS**](#-bbgi-ops--the-operational-engine) | Multi-site security & facilities | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
-| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> [**MDXT-OPS**](#-mdxt-ops--the-engine-applied-to-care) | Nursing homes & home care | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
-| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> [**ECPK**](#-ecpk--field-services-and-buildings-opened-up-as-a-multi-provider-platform) | Field services & buildings, multi-provider | Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
-| [**MiniPlatform**](#miniplatform--a-subscription-manager-that-costs-nothing-to-run) | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
+| <img src="assets/logos/mdxt.png" alt="" width="22" align="top"> **MDXT** | Nursing homes & home care | PXNT kernel · Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
+| <img src="assets/logos/bbgi.png" alt="" width="22" align="top"> **BBGI** | Multi-site operations | PXNT kernel (moving onto it) · Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
+| <img src="assets/logos/ecpk.png" alt="" width="22" align="top"> **ECPK** | Field services & buildings, multi-provider | PXNT kernel · Next.js 16 · Fastify + tRPC · Prisma/Postgres · Redis/BullMQ · Socket.io · WebAuthn · Google Maps · AI layer |
+| **MiniPlatform** | One small business, subscriptions & billing | Next.js 16 · Server Actions · Prisma/Postgres · Vitest · Playwright |
 
-**One platform core under the three engines.** BBGI-OPS, MDXT-OPS and ECPK share the same foundation, so a fix or a hardening in one is a fix in all: passkeys (WebAuthn) and two-factor sign-in, database sessions with device control — every signed-in device listed, named and revocable — rate limiting on sign-in and on the sensitive routes, fail-closed role and per-resource permissions, append-only audit streams, realtime over WebSockets on each location's channel, and background jobs on Redis/BullMQ. What changes between them is the domain, never the plumbing.
+**One kernel under the products.** The rules PXNT holds itself to are checked by the build, not left to memory: a change happens only through one door and is written with its audit in the same transaction, so a change without a record cannot be saved; time is an input, never read from the clock inside the rules; refusals are answers, never crashes; two people racing produce one change and one clear conflict, never a silent overwrite; the engine and the network never import each other; and no product's or trade's words are allowed inside the shared code. Each product keeps passkeys and two-factor sign-in, sessions with every device listed and revocable, rate limits, fail-closed permissions and its own data — what changes between them is the domain, never the plumbing.
 
-**The AI layer.** AI is used only where it saves people typing, never where it decides: BBGI-OPS reads an uploaded roster PDF into shifts matched to existing staff, and a site manual into a structured document; MDXT-OPS and ECPK translate their catalogues into the other languages staff and clients read, and draft the wording of a bill from its facts. It never writes a number, a drafted bill text is only kept once a person saves it, translations are stored marked as machine-made so a person can correct them, and without a key each feature falls back to plain input. In MDXT-OPS the model only ever sees care labels and the billing period — never a diagnosis, the record or a carer's note.
+**The AI layer.** AI is used only where it saves people typing, never where it decides: in BBGI it reads an uploaded roster PDF into shifts matched to existing staff, and a site manual into a structured document; MDXT and ECPK translate their catalogues into the other languages staff and clients read, and draft the wording of a bill from its facts. It never writes a number, a drafted bill text is only kept once a person saves it, translations are stored marked as machine-made so a person can correct them, and without a key each feature falls back to plain input. In MDXT the model only ever sees care labels and the billing period — never a diagnosis, the record or a carer's note.
 
 ### Inside each product
 
 <details>
-<summary><img src="assets/logos/bbgi.png" alt="" width="22" align="top"> <b>BBGI-OPS</b> — space, procedures, staffing, the cockpit, risk and governance</summary>
+<summary><img src="assets/logos/bbgi.png" alt="" width="22" align="top"> <b>BBGI</b> — space, procedures, staffing, the cockpit, risk and governance</summary>
 
 <br>
 
-A generic engine for work that needs follow-through: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry; its first domain is multi-site security and facilities — guards, reception, patrols, alarms, door checks — where spreadsheets, chats and disconnected dashboards are too weak. The domain layer changes per product. The engine does not.
+Work that needs follow-through across many sites: who owns it, who may act on it, what proof it needs, what is late, and what that lateness costs. It assumes no industry — rounds, inspections, maintenance, reception, contractor visits — wherever spreadsheets, chats and disconnected dashboards are too weak. Its rules are AVGVSTVS's; BBGI brings its words and its look.
 
-**The audit and the Command Center, on the phone** — on the left, a guard works an overdue fire-door audit door by door and flags a magnet; on the right, every office and duty on one live 0–100 risk index with its trend: an alarm pushes an office up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
+**The audit and the Command Center, on the phone** — on the left, someone on site works an overdue fire-door audit door by door and flags a faulty magnet; on the right, every site and task on one live 0–100 risk index with its trend: an alert pushes a site up, a late check-in and overdue work being done bring others down, and the ranking reorders as it happens:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: a guard works the fire-door audit, ticking doors and reporting a magnet issue" width="44%">
+  <img src="assets/bbgi-ops/bbgi-phone-cockpit-duty.webp" alt="On a phone: the fire-door audit worked door by door, a magnet issue reported" width="44%">
   &nbsp;
-  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with offices and duties ranked by live risk" width="44%">
+  <img src="assets/bbgi-ops/bbgi-phone-command-center.webp" alt="On a phone: the Command Center with sites and tasks ranked by live risk" width="44%">
 </p>
 
 - **Space as a model** — organization → region → site → building → floor → zone → room, with typed assets (doors included) and checkpoints.
-- **Procedures, not checklists** — reusable templates of ordered steps with typed answers, per-step competency gates, multiple signatures, dependencies, issue flagging and follow-up work triggered by an answer; each site can override a step without forking the procedure.
+- **Procedures, not checklists** — reusable templates of ordered steps with typed answers, per-step qualification gates, multiple signatures, dependencies, issue flagging and follow-up work opened by an answer; each site can override a step without forking the procedure.
 - **Planning separate from staffing** — posts carry their recurring work, shift templates define seats; people claim seats gated by role, certification, post qualification, working-time limits and overlap checks.
-- **The cockpit** — a live timeline of the operational day: check-in and check-out as presence, join, pause, postpone, skip and assign on duties, urgent responses that hold other work, and a handover that carries what is still open into the next shift.
-- **Alarms and issues** — alarms spawn response procedures; issues are collaborative tickets linked to the duty, step and asset they came from.
-- **Explainable risk** — 0–100 per duty, alarm, issue and site, rising with lateness and falling with each completed step; the Command Center ranks offices and duties with their trends.
-- **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every mutation is tagged and audited, and a governance view shows accountability, weak points and permission posture.
+- **The cockpit** — a live timeline of the operational day: check-in and check-out as presence, join, pause, postpone, skip and assign on tasks, urgent responses that hold other work, and a handover that carries what is still open into the next shift.
+- **Alerts and issues** — four alert levels, each opening its response procedure; issues are shared tickets linked to the task, step and asset they came from.
+- **Explainable risk** — 0–100 per task, alert, issue and site, rising with lateness and falling with each completed step; the Command Center ranks sites and tasks with their trends.
+- **Governance** — stacked roles with per-membership permission matrices, per-item stakeholders and overrides; every change is tagged and audited, and a governance view shows accountability, weak points and permission posture.
 - **AI that saves typing** — the AI layer turns an uploaded roster PDF into shifts matched to the people already on file, and a site manual into a structured document; without it, the manual falls back to plain text extraction.
 
-**Answers that spawn the next work** — left, the fire-door audit's magnet test answered *Fail*: once it is signed, a door repair check and a fire-watch round land on the same shift, each linked back to the audit; the repair check comes back *Not fixed*, and that answer spawns an incident report in turn. Right, a door-held response whose last answer is the cause — *Forced entry* closes the alarm as real, and signing it puts an incident report and a lockdown round on the shift:
+**Answers that open the next work, and everything around it** — left, the fire-door audit's magnet test answered *Fail*: once it is signed, a door repair check and a follow-up round land on the same shift, each linked back to the audit, and the repair check answered *Not fixed* opens a report in turn. Right, the issues as tickets, a member's role, qualified posts and certifications, and a completed task opened to its evidence:
 
 <p align="center">
-  <img src="assets/bbgi-ops/bbgi-phone-spawn-duty.webp" alt="On a phone: the fire-door audit's magnet test answered Fail, the audit signed, a door repair check and a fire-watch round appear linked to it; the repair check answered Not fixed spawns an incident report" width="44%">
-  &nbsp;
-  <img src="assets/bbgi-ops/bbgi-phone-spawn-response.webp" alt="On a phone: a door-held response raised from the cockpit, its last step Cause answered Forced entry, the alarm closed, and an incident report and a lockdown round spawned on the shift" width="44%">
-</p>
-
-**On shift, together · around the engine** — left, the roster shows who is busy and who is free; a door-held alarm puts other work on hold until it is answered, a colleague acknowledges it live, and the check-out hands what is still open to the next shift. Right, around it: the issues as tickets, a member's role, qualified posts and certifications, and a completed duty opened to its evidence:
-
-<p align="center">
-  <img src="assets/bbgi-ops/bbgi-phone-cockpit-team.webp" alt="The roster, a door-held alarm holding other work, joining and closing the response, and the handover at check-out" width="44%">
+  <img src="assets/bbgi-ops/bbgi-phone-spawn-duty.webp" alt="On a phone: the fire-door audit's magnet test answered Fail, the audit signed, a door repair check and a follow-up round appear linked to it; the repair check answered Not fixed opens a report" width="44%">
   &nbsp;
   <img src="assets/bbgi-ops/bbgi-phone-tour.webp" alt="On a phone: the issues list, a member's role, qualified posts and certifications, and the evidence of a completed fire-door audit" width="44%">
 </p>
@@ -137,7 +181,7 @@ A generic engine for work that needs follow-through: who owns it, who may act on
 </details>
 
 <details>
-<summary><img src="assets/logos/mdxt.png" alt="" width="22" align="top"> <b>MDXT-OPS</b> — the record, access, care plans, staffing, the shift market and billing</summary>
+<summary><img src="assets/logos/mdxt.png" alt="" width="22" align="top"> <b>MDXT</b> — the record, access, care plans, staffing, the shift market and billing</summary>
 
 <br>
 
@@ -161,7 +205,7 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 - **An open market for the shifts nobody can cover** — a post the team cannot fill can be opened to outside professionals, one day or a whole week as one job. They see it, apply or get offered it by name, and only qualify if they hold the required role and certifications — an expired credential counts as not held — and the shift fits their working-time and rest limits.
 - **Live, who is where and allowed to be** — who is online and available, who is on shift, which duty each person is on right now, and what they are certified for, with expiry dates tracked.
 - **The shift** — duties with steps, co-signatures, a shift journal, a signed handover, and risk and escalation sweeps.
-- **Live, and on the road** — the engine's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
+- **Live, and on the road** — the platform's realtime layer (WebSockets on each location's channel): every duty that moves, a note typed or a response raised reaches every open cockpit at once. On a home-care round each journey between visits is a leg measured by the carer's phone — GPS track on a map, distance and time sealed into the record, a typed distance when there is no signal — with its start and destination read off the round itself.
 - **Billing** — completed care becomes billable items under the country's tariff scheme, split between insurer, public payer and client, then bills, payments and reminders (with the QR-bill in Switzerland).
 - **AI, kept outside the record** — the AI layer drafts translations of the care catalogue (saved as machine rows a person can correct) and the wording of a bill. It is given the care's labels and the period, never a diagnosis, the record or a carer's note, and it never writes a number.
 
@@ -194,7 +238,7 @@ Structures, locations, wards, rooms and beds, the people who work there and the 
 
 <br>
 
-Built for a Swiss field-service company, then opened up so any service company can run its own branded storefront on the same engine. The place stays central: every job, cost and photo accumulates on the location itself, so the history outlives a change of tenant, team or provider.
+Built for a Swiss field-service company, then opened up so any service company can run its own branded storefront on the same network. The place stays central: every job, cost and photo accumulates on the location itself, so the history outlives a change of tenant, team or provider.
 
 `131 data models` · `57 API routers` · `4 languages` · `realtime everywhere`
 
@@ -395,6 +439,7 @@ Authorization    role-based · scoped · entity-aware access control
 Architecture     multi-entity account model · organization/site scoping · multi-tenant-ready structure
 Infra            AWS · S3 · SES · SNS · deployment pipelines · production config
 AI Layer         scoped AI assistance · document parsing · structured automation
+Kernel           PXNT · one platform built once · AVGVSTVS (the engine) · MERCVRIVS (the service network)
 ```
 
 The stack matters, but it is not the advantage by itself. The advantage is knowing how to turn messy operational reality into a working product model.
